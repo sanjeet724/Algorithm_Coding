@@ -45,7 +45,6 @@ class AVLNode {
 	}
 	
 	public void check_balance(AVLNode n) {
-		// Test- hopefully this works
 		if(Math.abs(n.left.height - n.right.height) > 1) {
 			System.out.println("Imbalanced AVL detected");
 		}
