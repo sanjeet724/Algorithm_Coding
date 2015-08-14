@@ -1,56 +1,81 @@
 package AVLTree;
 
 public class AVLTree {
-	Node root;
-	AVLTree parentTree;
-	AVLTree leftSubtree;
-	AVLTree rightSubtree;
-	int height;
-	
+	AVLNode root;
+
 	
 	AVLTree() {
-		this.root= null;
-		this.parentTree = null;
-		this.leftSubtree = null;
-		this.rightSubtree = null;
-		this.height = -1;
 	}
 	
 	public void insertNode (int k) {
 		System.out.println("Inserting key: " + k);
-		Node n = new Node(k);
-		if (this.root == null ) {
-			this.root = n;
-			this.height = 0;
-			return;
-		}
-		// find position of insert
-		Node current = this.root;
-		Node temp = null;
+		AVLNode n = new AVLNode(k);
+		AVLNode current = this.root; // pointer to move from root to position of insert
+		AVLNode temp = null;         // would be parent-node where 'n' will be inserted
 		while (current != null) {
 			temp = current;
 			if (n.key < current.key){
-				current = this.leftSubtree.root;
+				current = current.left;
 			}
 			else {
-				current = this.rightSubtree.root;
+				current = current.right;
 			}
 		}
 		// insert at this position
-		this.parentTree.root = temp;
+		n.parent = temp;
+		if (temp == null) {
+			this.root = n;
+			return; 
+		}
 		if (n.key < temp.key){
-			this.leftSubtree.parentTree.root = temp;
-			this.leftSubtree.root = n;
-			this.leftSubtree.height = 0;
-			this.leftSubtree.parentTree.height++;
+			temp.left = n;
 		}
 		else {
-			this.rightSubtree.parentTree.root = temp;
-			this.rightSubtree.root = n;
-			this.rightSubtree.height = 0;
-			this.rightSubtree.parentTree.height++;
+			temp.right = n;
 		}
+		updateHeights(n);
 	}
+	
+	public void updateHeights(AVLNode n) {
+		/*
+		AVLNode current = n;
+		// base case
+		if (current.parent == null){
+			if (current.left.height > current.right.height){
+				current.height = current.left.height + 1;
+			}
+			else {
+				current.height = current.right.height + 1;
+			}
+		}
+		else {
+			current = current.parent;
+			if (current.left.height > current.right.height){
+				current.height = current.left.height + 1;
+			}
+			else {
+				current.height = current.right.height + 1;
+			}
+			updateHeights(current);
+		}
+		*/
+		AVLNode current = n.parent;
+		while (current != null){
+			if (current.left.height > current.right.height){
+				current.height = current.left.height + 1;
+			}
+			else {
+				current.height = current.right.height + 1;
+			}
+			current = current.parent;
+		}
+		
+	}
+	
+	public int getHeightofTree(){
+		return this.root.height;
+	}
+	
 	
 	public void inOrderTraversal(){
 		
