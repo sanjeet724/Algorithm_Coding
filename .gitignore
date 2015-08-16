@@ -18,8 +18,6 @@ $RECYCLE.BIN/
 \sas
 \.settings
 \bin
-\.classpath
-\.project
 
 # Windows shortcuts
 *.lnk
