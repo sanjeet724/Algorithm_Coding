@@ -8,10 +8,11 @@ class AVLNode {
 	AVLNode left;
 	
 	public AVLNode(int k) {
-		this.height = 0;
-		this.parent = null;
-		this.right = null;
+		this.key = k;
+		this.height = -1;
 		this.left = null;
+		this.right = null;
+		this.parent = null;
 	}
 	
 	public AVLNode(int k, AVLNode p, boolean insertLeft){

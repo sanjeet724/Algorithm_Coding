@@ -18,7 +18,7 @@ public class AVLTreeDriver {
 		avl.insertNode(n);
 	}
 	scanner.close();
-	//System.out.println("Height of Tree is: " + avl.getHeightofTree());
+	System.out.println("Height of Tree is: " + avl.getHeightofTree());
     
 	}
 

@@ -3,7 +3,6 @@ package AVLTree;
 
 public class AVLTree {
 	AVLNode root;
-
 	
 	AVLTree() {
 	}
@@ -26,51 +25,55 @@ public class AVLTree {
 		n.parent = temp;
 		if (temp == null) {
 			this.root = n;
+			this.root.height++;
 			return; 
 		}
 		if (n.key < temp.key){
 			temp.left = n;
+			if (temp.right == null) {
+				temp.height = n.height + 1;
+			}
+			else {
+				temp.height = temp.right.height + 1;
+			}
 		}
 		else {
 			temp.right = n;
+			if (temp.left == null) {
+				temp.height = n.height + 1;
+			}
+			else {
+				temp.height = temp.left.height + 1;
+			}
 		}
-		updateHeights(n);
+		updateHeights(temp);
 	}
 	
-	public void updateHeights(AVLNode n) {
-		/*
-		AVLNode current = n;
-		// base case
-		if (current.parent == null){
-			if (current.left.height > current.right.height){
-				current.height = current.left.height + 1;
-			}
-			else {
-				current.height = current.right.height + 1;
-			}
-		}
-		else {
+	public void updateHeights(AVLNode p) {
+		AVLNode current = p;
+		if (current.parent != null ){
+			current.height++;
 			current = current.parent;
-			if (current.left.height > current.right.height){
-				current.height = current.left.height + 1;
-			}
-			else {
-				current.height = current.right.height + 1;
-			}
 			updateHeights(current);
 		}
-		*/
-		AVLNode current = n.parent;
-		while (current != null){
-			if (current.left.height > current.right.height){
-				current.height = current.left.height + 1;
-			}
-			else {
-				current.height = current.right.height + 1;
-			}
-			current = current.parent;
-		}
-		
+		// we are at root - base case
+        if (current.left == null ){
+        	current.height = current.right.height + 1 ;
+        	return;
+        }
+        else if (current.right == null){
+        	current.height = current.left.height + 1;
+        	return;
+        }
+        else {
+        	if (current.left.height > current.right.height){
+        		current.height = current.left.height + 1;
+        	}
+        	else {
+        		current.height = current.right.height + 1;
+        	}
+        	return;
+        }
 	}
 	
 	public int getHeightofTree(){
