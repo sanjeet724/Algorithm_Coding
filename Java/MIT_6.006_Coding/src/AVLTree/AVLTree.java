@@ -3,8 +3,10 @@ package AVLTree;
 
 public class AVLTree {
 	AVLNode root;
+	boolean AVLProperty;
 	
-	AVLTree() {
+	public AVLTree() {
+		this.AVLProperty = true;
 	}
 	
 	public void insertNode (int k) {
@@ -33,17 +35,17 @@ public class AVLTree {
 		else {
 			wouldBeParent.right = newNode;
 		}
-		// update the heights of the parent
+		// update the height of the parent
 		wouldBeParent.updateParentHeight();
-		// update the height of the ancestors
+		// update the heights' of the ancestors
 		wouldBeParent.updateAncestorHeight();
+		// check if AVL Property is maintained
+		this.AVLProperty = wouldBeParent.checkAVLProperty();
 	}
-
 	
 	public int getHeightofTree(){
 		return this.root.height;
 	}
-	
 	
 	public void inOrderTraversal(){
 		
