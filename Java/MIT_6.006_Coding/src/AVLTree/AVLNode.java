@@ -50,13 +50,13 @@ class AVLNode {
 	// for all of the ancestors
 	public boolean checkAVLProperty(){
 		AVLNode current = this;
-		while (current.parent != null) {	
+		if (current.parent != null) {	
 		   if (checkBalance(current)){
 			   return false;
 		   }
 		  // recurse till you reach root
 		  current = current.parent;
-		  current.checkAVLProperty(); 
+		  return current.checkAVLProperty(); 
 		}
 		// base case - root
 		if (checkBalance(current)){
