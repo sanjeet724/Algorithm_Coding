@@ -9,40 +9,40 @@ class AVLNode {
 	
 	public AVLNode(int k) {
 		this.key = k;
-		this.height = -1;
+		this.height = 0;
 		this.left = null;
 		this.right = null;
 		this.parent = null;
 	}
 	
-	public AVLNode(int k, AVLNode p, boolean insertLeft){
-		this.key = k;
-		this.height = 0;
-		this.parent = p;
-		if (insertLeft) {
-			p.left = this;
-			p.right = null;
+	// Given a parent node, update its height after an insertion operation
+	public void updateParentHeight(){
+		if (this.left == null){
+			this.height = this.right.height + 1;
+		}
+		else if (this.right == null) {
+			this.height = this.left.height + 1;
 		}
 		else {
-			p.right = this;
-			p.left = null;
-		}
-		update_height(p);
-		check_balance(p);
-	}
-	
-	public void update_height(AVLNode n){
-		if (n.parent != null) {
-			n = n.parent;
-			update_height(n);
-		} else {
-			if (n.left.height > n.right.height){
-				n.height = n.left.height + 1;
+			if (this.left.height > this.right.height){
+				this.height = this.left.height + 1;
 			}
 			else {
-				n.height = n.right.height + 1;
+				this.height = this.right.height + 1;
 			}
 		}
+	}
+	
+	// Given a parent node, update its ancestor's height after an insertion;
+	public void updateAncestorHeight(){
+		AVLNode current = this;
+		if (current.parent != null ) {
+			current.parent.updateParentHeight();
+			current = current.parent;
+			current.updateAncestorHeight();
+		}
+		// base case (root) - so just update the height
+		current.updateParentHeight();
 	}
 	
 	public void check_balance(AVLNode n) {
