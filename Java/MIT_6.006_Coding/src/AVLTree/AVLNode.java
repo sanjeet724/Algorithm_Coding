@@ -52,6 +52,7 @@ class AVLNode {
 		AVLNode current = this;
 		if (current.parent != null) {	
 		   if (checkBalance(current)){
+			   //Rotate(current);
 			   return false;
 		   }
 		  // recurse till you reach root
@@ -60,22 +61,44 @@ class AVLNode {
 		}
 		// base case - root
 		if (checkBalance(current)){
+			// Rotate(current);
 			return false;
 		}
 		return true;
 	}
 	
 	private boolean checkBalance(AVLNode n){
-	   int leftHeight = getLeftHeight(n);
-	   int rightHeight = getRightHeight(n);
-	   if (Math.abs(leftHeight-rightHeight) > 1){
-		   System.out.println("AVL property violated");
-		   System.out.println("Violated Node: " + n.key);
-		   return true;
-	   }
-	   return false;
+		   int leftHeight = getLeftHeight(n);
+		   int rightHeight = getRightHeight(n);
+		   if (Math.abs(leftHeight-rightHeight) > 1){
+			   System.out.println("AVL property violated");
+			   System.out.println("Violated Node: " + n.key);
+			   return true;
+		   }
+		   return false;
+		}
+	/*
+	private void Rotate(AVLNode n){
+		int leftHeight = getLeftHeight(n);
+		int rightHeight = getRightHeight(n);
+		if (rightHeight > leftHeight) {
+			// left heavy
+			if (leftHeight == -1) { // means no left child
+				n.right.parent = n.parent;
+				// check if n was left or right child
+				if (n.parent.left == n) {
+					n.parent.left = n.right;
+				}
+				else {
+					n.parent.right = n.right;
+				}
+				n.right.left = n;
+				n.left = null;
+				n.right = null;
+			}
+		}
 	}
-	
+	*/
 	
 	private int getLeftHeight(AVLNode n) {
 		if (n.left != null){

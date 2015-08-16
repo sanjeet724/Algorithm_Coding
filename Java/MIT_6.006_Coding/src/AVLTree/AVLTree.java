@@ -41,6 +41,10 @@ public class AVLTree {
 		wouldBeParent.updateAncestorHeight();
 		// check if AVL Property is maintained
 		this.AVLProperty = wouldBeParent.checkAVLProperty();
+		// rotations
+		if (!this.AVLProperty){
+			// do rotations
+		}
 	}
 	
 	public int getHeightofTree(){
