@@ -1,6 +1,7 @@
 package BinarySearchTree;
 
 
+
 public class BST {
 	Node root;
 	Node current; 
