@@ -12,12 +12,12 @@ public class AVLTreeDriver {
   
 	System.out.println("Reading the input file... ");
 	Scanner scanner = new Scanner(new File("inputKeys.txt"));
-	while (scanner.hasNextInt() && avl.AVLProperty){
+	while (scanner.hasNextInt() ) { //&& avl.AVLProperty){
 		int n = scanner.nextInt();
 		avl.insertNode(n);
-		if (!avl.AVLProperty){
-			System.out.println("Please fix the unbalanced node before more inserts");
-		}
+//		if (!avl.AVLProperty){
+//			System.out.println("Please fix the unbalanced node before more inserts");
+//		}
 	}
 	scanner.close();
 	System.out.println("Height of Tree is: " + avl.getHeightofTree());

@@ -44,6 +44,8 @@ public class AVLTree {
 		// rotations
 		if (!this.AVLProperty){
 			// do rotations
+			wouldBeParent.Rotate();
+			this.AVLProperty = wouldBeParent.checkAVLProperty();
 		}
 	}
 	

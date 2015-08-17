@@ -52,7 +52,7 @@ class AVLNode {
 		AVLNode current = this;
 		if (current.parent != null) {	
 		   if (checkBalance(current)){
-			   //Rotate(current);
+			   // Rotate(current);
 			   return false;
 		   }
 		  // recurse till you reach root
@@ -77,28 +77,32 @@ class AVLNode {
 		   }
 		   return false;
 		}
-	/*
-	private void Rotate(AVLNode n){
-		int leftHeight = getLeftHeight(n);
-		int rightHeight = getRightHeight(n);
+	
+	public void Rotate(){
+		AVLNode toRotate = this;
+		int leftHeight = getLeftHeight(toRotate);
+		int rightHeight = getRightHeight(toRotate);
 		if (rightHeight > leftHeight) {
-			// left heavy
-			if (leftHeight == -1) { // means no left child
-				n.right.parent = n.parent;
-				// check if n was left or right child
-				if (n.parent.left == n) {
-					n.parent.left = n.right;
-				}
-				else {
-					n.parent.right = n.right;
-				}
-				n.right.left = n;
-				n.left = null;
-				n.right = null;
-			}
+			RotateLeft(toRotate); // right heavy, do left rotation
+		}
+		else {
+			RotateRight(toRotate);  // left heavy, do right rotation
 		}
 	}
-	*/
+  
+	private void RotateLeft(AVLNode x){
+		System.out.println("Performing left rotation");
+		AVLNode y = x.right;
+		x.parent = x.parent;
+		x.parent = y;
+		y.left = x;
+		x.right = y.left;
+	}
+	
+	private void RotateRight(AVLNode n){
+		
+	}
+	
 	
 	private int getLeftHeight(AVLNode n) {
 		if (n.left != null){
