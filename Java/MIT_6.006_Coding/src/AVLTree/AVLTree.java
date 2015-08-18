@@ -35,13 +35,11 @@ public class AVLTree {
 		else {
 			wouldBeParent.right = newNode;
 		}
-		// update the height of the parent
-		wouldBeParent.updateParentHeight();
-		// update the heights' of the ancestors
-		wouldBeParent.updateAncestorHeight();
+		// update the heights of the parent
+		// and ancestors till the root
+		wouldBeParent.updateHeights();
 		// check if AVL Property is maintained
 		this.AVLProperty = wouldBeParent.checkAVLProperty();
-		// rotations
 		if (!this.AVLProperty){
 			// do rotations
 			wouldBeParent.Rotate();

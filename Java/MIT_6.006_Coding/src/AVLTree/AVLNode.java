@@ -15,8 +15,13 @@ class AVLNode {
 		this.parent = null;
 	}
 	
+	public void updateHeights(){
+		this.updateParentHeight();
+		this.updateAncestorHeight();
+	}
+	
 	// Given a parent node, update its height after an insertion operation
-	public void updateParentHeight(){
+	private void updateParentHeight(){
 		if (this.left == null){
 			this.height = this.right.height + 1;
 		}
@@ -33,8 +38,9 @@ class AVLNode {
 		}
 	}
 	
-	// Given a parent node, update its ancestor's height after an insertion;
-	public void updateAncestorHeight(){
+	// Given a parent node, update its ancestor's height 
+	// till root after an insertion;
+	private void updateAncestorHeight(){
 		AVLNode current = this;
 		if (current.parent != null ) {
 			current.parent.updateParentHeight();
@@ -93,7 +99,7 @@ class AVLNode {
 	private void RotateLeft(AVLNode x){
 		System.out.println("Performing left rotation");
 		AVLNode y = x.right;
-		x.parent = x.parent;
+		y.parent = x.parent;
 		x.parent = y;
 		y.left = x;
 		x.right = y.left;
