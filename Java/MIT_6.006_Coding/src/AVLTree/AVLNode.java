@@ -3,6 +3,7 @@ package AVLTree;
 class AVLNode {
 	int key;
 	int height;
+	boolean isUnbalanced;
 	AVLNode parent;
 	AVLNode right;
 	AVLNode left;
@@ -13,6 +14,8 @@ class AVLNode {
 		this.left = null;
 		this.right = null;
 		this.parent = null;
+		this.isUnbalanced = true;
+		
 	}
 	
 	public void updateHeights(){
@@ -54,34 +57,34 @@ class AVLNode {
 	// after each insert check if
 	// height of left child - height of right child <= 1
 	// for all of the ancestors
-	public boolean checkAVLProperty(){
+	public AVLNode checkAVLProperty(){
 		AVLNode current = this;
 		if (current.parent != null) {	
-		   if (checkBalance(current)){
-			   // Rotate(current);
-			   return false;
+		   if (checkBalance(current) != null){
+			   return current;
 		   }
 		  // recurse till you reach root
 		  current = current.parent;
 		  return current.checkAVLProperty(); 
 		}
 		// base case - root
-		if (checkBalance(current)){
-			// Rotate(current);
-			return false;
+		if (checkBalance(current) != null){
+			return current;
 		}
-		return true;
+		return null;
 	}
 	
-	private boolean checkBalance(AVLNode n){
+	private AVLNode checkBalance(AVLNode n){
 		   int leftHeight = getLeftHeight(n);
 		   int rightHeight = getRightHeight(n);
 		   if (Math.abs(leftHeight-rightHeight) > 1){
 			   System.out.println("AVL property violated");
 			   System.out.println("Violated Node: " + n.key);
-			   return true;
+			   n.isUnbalanced = false;
+			   return n;
 		   }
-		   return false;
+		   n.isUnbalanced = true;
+		   return null;
 		}
 	
 	public void Rotate(){
@@ -89,20 +92,34 @@ class AVLNode {
 		int leftHeight = getLeftHeight(toRotate);
 		int rightHeight = getRightHeight(toRotate);
 		if (rightHeight > leftHeight) {
+			System.out.println("Performing left rotation for: " + toRotate.key);
 			RotateLeft(toRotate); // right heavy, do left rotation
 		}
 		else {
 			RotateRight(toRotate);  // left heavy, do right rotation
 		}
 	}
+	
+	public void updateSelfHeight() {
+		if (this.left == null && this.right == null){
+			this.height = 0;
+		}
+		else if (this.left == null) {
+			this.height = this.right.height + 1;
+		}
+		else {
+			this.height = this.left.height + 1;
+		}
+	}
   
 	private void RotateLeft(AVLNode x){
-		System.out.println("Performing left rotation");
 		AVLNode y = x.right;
 		y.parent = x.parent;
-		x.parent = y;
 		y.left = x;
+		x.parent = y;
 		x.right = y.left;
+		x.height = x.height - 2;
+		x.updateHeights();
 	}
 	
 	private void RotateRight(AVLNode n){

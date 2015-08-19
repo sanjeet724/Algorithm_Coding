@@ -12,7 +12,7 @@ public class AVLTreeDriver {
   
 	System.out.println("Reading the input file... ");
 	Scanner scanner = new Scanner(new File("inputKeys.txt"));
-	while (scanner.hasNextInt() ) { //&& avl.AVLProperty){
+	while (scanner.hasNextInt()) { //&& avl.AVLProperty){
 		int n = scanner.nextInt();
 		avl.insertNode(n);
 //		if (!avl.AVLProperty){

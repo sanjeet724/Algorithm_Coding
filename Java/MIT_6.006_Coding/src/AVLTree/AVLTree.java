@@ -3,10 +3,10 @@ package AVLTree;
 
 public class AVLTree {
 	AVLNode root;
-	boolean AVLProperty;
-	
+	AVLNode heavy;
+
 	public AVLTree() {
-		this.AVLProperty = true;
+
 	}
 	
 	public void insertNode (int k) {
@@ -39,11 +39,10 @@ public class AVLTree {
 		// and ancestors till the root
 		wouldBeParent.updateHeights();
 		// check if AVL Property is maintained
-		this.AVLProperty = wouldBeParent.checkAVLProperty();
-		if (!this.AVLProperty){
-			// do rotations
-			wouldBeParent.Rotate();
-			this.AVLProperty = wouldBeParent.checkAVLProperty();
+		this.heavy = wouldBeParent.checkAVLProperty();
+		while (this.heavy != null){
+			this.heavy.Rotate();
+			this.heavy = wouldBeParent.checkAVLProperty();
 		}
 	}
 	
