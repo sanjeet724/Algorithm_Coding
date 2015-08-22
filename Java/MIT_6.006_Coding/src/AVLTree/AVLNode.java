@@ -18,18 +18,33 @@ class AVLNode {
 		
 	}
 	
+	private AVLNode(AVLNode n){
+		this.key = n.key;
+		this.height = n.height;
+		this.left = n.left;
+		this.right = n.right;
+		this.parent = null; // set the parent to null, because this is the only one we care about
+		this.isUnbalanced = true;
+	}
+	
 	public void updateHeights(){
-		this.updateParentHeight();
+		this.updateSelfHeight();
 		this.updateAncestorHeight();
 	}
 	
-	// Given a parent node, update its height after an insertion operation
-	private void updateParentHeight(){
-		if (this.left == null){
-			this.height = this.right.height + 1;
+	// Given a node, update its height after an insertion operation
+	private void updateSelfHeight(){
+		if (this.left == null && this.right == null){
+			this.height = 0;
+			return;
 		}
-		else if (this.right == null) {
+		if (this.left == null && this.right != null){
+			this.height = this.right.height + 1;
+			return;
+		}
+		else if (this.right == null && this.left != null) {
 			this.height = this.left.height + 1;
+			return;
 		}
 		else {
 			if (this.left.height > this.right.height){
@@ -38,20 +53,19 @@ class AVLNode {
 			else {
 				this.height = this.right.height + 1;
 			}
+			return;
 		}
 	}
 	
-	// Given a parent node, update its ancestor's height 
-	// till root after an insertion;
+	// Given a node, update its ancestor's height 
+	// till the root after an insertion;
 	private void updateAncestorHeight(){
 		AVLNode current = this;
 		if (current.parent != null ) {
-			current.parent.updateParentHeight();
+			current.parent.updateSelfHeight();
 			current = current.parent;
 			current.updateAncestorHeight();
 		}
-		// base case (root) - so just update the height
-		current.updateParentHeight();
 	}
 	
 	// after each insert check if
@@ -100,24 +114,27 @@ class AVLNode {
 		}
 	}
 	
-	public void updateSelfHeight() {
-		if (this.left == null && this.right == null){
-			this.height = 0;
-		}
-		else if (this.left == null) {
-			this.height = this.right.height + 1;
-		}
-		else {
-			this.height = this.left.height + 1;
-		}
+	
+	private AVLNode createTemporaryNode(AVLNode n){
+		if (n == null)
+			return null;
+		return new AVLNode(n);
 	}
   
 	private void RotateLeft(AVLNode x){
 		AVLNode y = x.right;
 		y.parent = x.parent;
+		x.parent.left = y;
+		AVLNode temp = createTemporaryNode(y.left);
 		y.left = x;
 		x.parent = y;
-		x.right = y.left;
+		if (temp != null){
+			x.right = temp;
+			temp.parent = x;
+		}
+		else {
+			x.right = null;
+		}
 		x.height = x.height - 2;
 		x.updateHeights();
 	}

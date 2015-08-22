@@ -21,6 +21,8 @@ public class AVLTreeDriver {
 	}
 	scanner.close();
 	System.out.println("Height of Tree is: " + avl.getHeightofTree());
+	//System.out.println("In-Order Traversal: ");
+	//avl.InorderTraversal();
 	}
 
 }

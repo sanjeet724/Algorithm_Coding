@@ -1,6 +1,5 @@
 package AVLTree;
 
-
 public class AVLTree {
 	AVLNode root;
 	AVLNode heavy;
@@ -40,7 +39,7 @@ public class AVLTree {
 		wouldBeParent.updateHeights();
 		// check if AVL Property is maintained
 		this.heavy = wouldBeParent.checkAVLProperty();
-		while (this.heavy != null){
+		if (this.heavy != null){
 			this.heavy.Rotate();
 			this.heavy = wouldBeParent.checkAVLProperty();
 		}
@@ -48,10 +47,6 @@ public class AVLTree {
 	
 	public int getHeightofTree(){
 		return this.root.height;
-	}
-	
-	public void inOrderTraversal(){
-		
 	}
 
 }
