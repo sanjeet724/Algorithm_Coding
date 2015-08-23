@@ -1,5 +1,6 @@
 package AVLTree;
 
+
 public class AVLTree {
 	AVLNode root;
 	AVLNode heavy;
@@ -36,6 +37,7 @@ public class AVLTree {
 		}
 		// update the heights of the parent
 		// and ancestors till the root
+		System.out.println("Inserting as a child of: " + wouldBeParent.key);
 		wouldBeParent.updateHeights();
 		// check if AVL Property is maintained
 		this.heavy = wouldBeParent.checkAVLProperty();
@@ -45,7 +47,20 @@ public class AVLTree {
 		}
 	}
 	
+	// this method updates the root
+	// roots might have changed after rotations
+	
+	private void resetRoot(){
+		while (this.root.parent != null){
+			this.root = this.root.parent;
+		}
+	}
+
 	public int getHeightofTree(){
+		if (this.root.parent != null){
+			resetRoot();
+		}
+		System.out.println("Root is: " + this.root.key);
 		return this.root.height;
 	}
 

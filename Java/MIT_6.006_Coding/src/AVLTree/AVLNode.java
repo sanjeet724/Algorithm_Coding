@@ -110,6 +110,7 @@ class AVLNode {
 			RotateLeft(toRotate); // right heavy, do left rotation
 		}
 		else {
+			System.out.println("Performing right rotation for: " + toRotate.key);
 			RotateRight(toRotate);  // left heavy, do right rotation
 		}
 	}
@@ -124,7 +125,15 @@ class AVLNode {
 	private void RotateLeft(AVLNode x){
 		AVLNode y = x.right;
 		y.parent = x.parent;
-		x.parent.left = y;
+		if (x.parent != null) {
+			if (x.parent.left == x) {
+				// i.e if x was a left child
+				x.parent.left = y;	
+			}
+			else {
+				x.parent.right = y;
+			}
+		}
 		AVLNode temp = createTemporaryNode(y.left);
 		y.left = x;
 		x.parent = y;
@@ -139,8 +148,30 @@ class AVLNode {
 		x.updateHeights();
 	}
 	
-	private void RotateRight(AVLNode n){
-		
+	private void RotateRight(AVLNode x){
+		AVLNode y = x.left;
+		y.parent = x.parent;
+		if (x.parent != null){
+			if (x.parent.left == x) {
+				// i.e if x was a left child
+				x.parent.left = y;
+			}
+			else {
+				x.parent.right = y;
+			}
+		}
+		AVLNode temp = createTemporaryNode(y.right);
+		y.right = x;
+		x.parent = y;
+		if (temp != null){
+			x.left = temp;
+			temp.parent = x;
+		}
+		else {
+			x.left = null;
+		}
+		x.height = x.height - 2;
+		x.updateHeights();
 	}
 	
 	
