@@ -1,12 +1,11 @@
 package AVLTree;
 
-
 public class AVLTree {
 	AVLNode root;
 	AVLNode heavy;
+	
 
-	public AVLTree() {
-
+	public AVLTree(){
 	}
 	
 	public void insertNode (int k) {
@@ -37,19 +36,20 @@ public class AVLTree {
 		}
 		// update the heights of the parent
 		// and ancestors till the root
-		System.out.println("Inserting as a child of: " + wouldBeParent.key);
 		wouldBeParent.updateHeights();
+		System.out.println("Would be parent is: " + wouldBeParent.key);
 		// check if AVL Property is maintained
 		this.heavy = wouldBeParent.checkAVLProperty();
-		if (this.heavy != null){
+		while (this.heavy != null){
 			this.heavy.Rotate();
 			this.heavy = wouldBeParent.checkAVLProperty();
 		}
+		// root might have changed
+		resetRoot();
 	}
 	
 	// this method updates the root
 	// roots might have changed after rotations
-	
 	private void resetRoot(){
 		while (this.root.parent != null){
 			this.root = this.root.parent;
@@ -57,11 +57,25 @@ public class AVLTree {
 	}
 
 	public int getHeightofTree(){
+		/* we are re-setting the root in insert,so not needed for now
 		if (this.root.parent != null){
 			resetRoot();
-		}
-		System.out.println("Root is: " + this.root.key);
+		}*/
 		return this.root.height;
 	}
-
+	
+	public void InorderTraveral(){
+		Inorder(this.root);
+	}
+	
+	private void Inorder(AVLNode n){
+		AVLNode current = n;
+		if (current != null){
+			current  = n.left;
+			Inorder(current);
+			System.out.printf("%02d ", n.key);
+			current = n.right; 
+			Inorder(current);
+		}
+	}
 }
