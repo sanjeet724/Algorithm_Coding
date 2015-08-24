@@ -7,3 +7,5 @@
 02
 18
 20
+// works till here
+// 19 makes the tree zig-zag heavy

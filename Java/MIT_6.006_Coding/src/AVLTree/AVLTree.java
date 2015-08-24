@@ -3,6 +3,8 @@ package AVLTree;
 public class AVLTree {
 	AVLNode root;
 	AVLNode heavy;
+	AVLNode min;
+	AVLNode max;
 	
 
 	public AVLTree(){
@@ -77,5 +79,13 @@ public class AVLTree {
 			current = n.right; 
 			Inorder(current);
 		}
+	}
+	
+	public void minAVLTree() {
+		AVLNode current = this.root;
+		while (current.left != null){
+			current = current.left;
+		}
+		this.min = current;
 	}
 }

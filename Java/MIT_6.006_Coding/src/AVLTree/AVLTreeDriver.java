@@ -23,6 +23,8 @@ public class AVLTreeDriver {
 	System.out.println("Height of Tree is: " + avl.getHeightofTree());
 	System.out.println("In-Order Traversal: ");
 	avl.InorderTraveral();
+	avl.minAVLTree();
+	System.out.println("\nMinimum of the AVL Tree is: " + avl.min.key);
 	}
 
 }

@@ -17,8 +17,8 @@ class AVLNode {
 		this.isUnbalanced = true;
 		
 	}
-	
-	private AVLNode(AVLNode n){
+	// temporary node used during re-balancing
+	private AVLNode(AVLNode n) {
 		this.key = n.key;
 		this.height = n.height;
 		this.left = n.left;
@@ -140,7 +140,7 @@ class AVLNode {
 		}
 		else {
 			if (n.parent.right == n){
-				// n is a right chile
+				// n is a right child
 				System.out.println("Right-Left Zig-Zag Heavyness Detected for: " + n.parent.key);
 				return true;
 			}
