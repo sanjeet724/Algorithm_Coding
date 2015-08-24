@@ -102,17 +102,50 @@ class AVLNode {
 		}
 	
 	public void Rotate(){
+		boolean zigzag;
 		AVLNode toRotate = this;
 		int leftHeight = getLeftHeight(toRotate);
 		int rightHeight = getRightHeight(toRotate);
 		if (rightHeight > leftHeight) {
+			zigzag = checkZigZagHeaviness(toRotate.right);
+			if (zigzag){
+				System.out.println("Performing left rotation for: " + toRotate.right.key);
+				RotateLeftZigZag(toRotate.right.left);
+			}
 			System.out.println("Performing left rotation for: " + toRotate.key);
 			RotateLeft(toRotate); // right heavy, do left rotation
 		}
 		else {
-			System.out.println("Performing right rotation for: " + toRotate.key);
-			RotateRight(toRotate);  // left heavy, do right rotation
+			zigzag = checkZigZagHeaviness(toRotate.left);
+			if (zigzag){
+				System.out.println("Performing right rotation for: " + toRotate.left.right.key);
+				RotateRightZigZag(toRotate.left.right);
+			}
+			else {
+				System.out.println("Performing right rotation for: " + toRotate.key);
+				RotateRight(toRotate);  // left heavy, do right rotation
+			}
 		}
+	}
+	
+	private boolean checkZigZagHeaviness(AVLNode n){
+		int leftHeight = getLeftHeight(n);
+		int rightHeight = getRightHeight(n); 
+		if (rightHeight > leftHeight){
+			if (n.parent.left == n){
+				// n is a left child
+				System.out.println("Left-Right Zig-Zag Heavyness Detected for: " + n.parent.key);
+				return true;
+			}
+		}
+		else {
+			if (n.parent.right == n){
+				// n is a right chile
+				System.out.println("Right-Left Zig-Zag Heavyness Detected for: " + n.parent.key);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	
@@ -172,6 +205,15 @@ class AVLNode {
 		}
 		x.height = x.height - 2;
 		x.updateHeights();
+	}
+	
+	private void RotateLeftZigZag(AVLNode n){
+		// To be implemented
+	}
+	
+	
+	private void RotateRightZigZag(AVLNode n){
+		// To be implemented
 	}
 	
 	
