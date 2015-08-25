@@ -7,16 +7,13 @@ import java.util.Scanner;
 public class HeapDriver {
 
 	public static void main(String[] args) throws IOException{
-        
-		// create an array of 10 heap nodes
-		HeapNode [] heapArray = new HeapNode[10];
+        // create a heap-set
+		HeapSet hs = new HeapSet();
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
-		int index = 0;
 		while (scanner.hasNextInt()){
-			HeapNode h = new HeapNode(scanner.nextInt());
-			heapArray[index] = h;
-			index++;
+			HeapSet.HeapNode  h = hs.new HeapNode(scanner.nextInt());
+			hs.addItem(h);
 		}
 		scanner.close();
 	}

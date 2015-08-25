@@ -1,5 +1,0 @@
-package Heaps;
-
-class Heap {
-
-}
