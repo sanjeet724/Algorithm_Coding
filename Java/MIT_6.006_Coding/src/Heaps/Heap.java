@@ -12,6 +12,7 @@ class Heap {
 		this.items = new HeapItem[this.size];
 	}
 	
+	// This function is used to insert into the array
 	public void addItem(HeapItem h) {
 		this.items[this.index] = h;
 		this.index++;
@@ -34,6 +35,7 @@ class Heap {
 	}
 	*/
 	
+	// create a heap from an un-Ordred array 
 	public void buildMaxHeap() {
 		for (int i = this.size/2 - 1 ; i >=0; i--) {
 			maxHeapify(this.items, i);
@@ -43,7 +45,7 @@ class Heap {
 	
 	 //correct a single violation of the heap
 	 //property in a subtree at its root
-	private void maxHeapify(HeapItem [] heapArray, int index){
+	public void maxHeapify(HeapItem [] heapArray, int index){
 		int l = left(index);
 		int r = right(index);
 		int largest = index;
@@ -54,9 +56,11 @@ class Heap {
 			largest = r;
 		}
 		if (largest != index){
+			// swap
 			HeapItem temp = new HeapItem(heapArray[largest].key);
 			heapArray[largest] = heapArray[index];
 			heapArray[index] = temp;
+			// after the swap verify the max-heap property
 			maxHeapify(heapArray, largest);
 		}
 		return;
@@ -65,9 +69,9 @@ class Heap {
 	public void heapSort(){
 		// first build the heap in case its not built
 		this.buildMaxHeap(); 
-		// swap 1st element with last one
 		System.out.println("Performing Heap-Sort");
 		while (this.size != 0){
+			// swap 1st element with last one
 			HeapItem temp = new HeapItem(this.items[0].key);
 			this.items[0] = this.items[this.size-1];
 			this.items[this.size-1] = temp;
@@ -85,4 +89,18 @@ class Heap {
 		}
 		System.out.println();
 	}
+	
+	// extract and remove the maximum from the heap
+	// resize the heap
+	public HeapItem ExtractMax(){
+		// always create a new temporary variable rather tha just assigning
+		// learn from the mistakes of BST code
+		HeapItem max = new HeapItem(this.items[0].key);
+		this.items[0] = this.items[this.size-1];
+		this.items[this.size-1] = max;
+		this.size = this.size-1;
+		maxHeapify(this.items, 0);
+		return max;
+	}
+	
 }

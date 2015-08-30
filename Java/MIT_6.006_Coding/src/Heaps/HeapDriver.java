@@ -17,6 +17,10 @@ public class HeapDriver {
 			heap.addItem(heapItem);
 		}
 		scanner.close();
-		heap.heapSort();
+		// heap.heapSort();  // Heap Sort Algorithm
+		heap.buildMaxHeap(); 
+		while(heap.size != 0){
+			System.out.println("Max is " + heap.ExtractMax().key);
+		}
 	}
 }
