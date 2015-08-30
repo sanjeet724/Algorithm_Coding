@@ -4,3 +4,5 @@ AVLTree - with left and right rotations(works)
 77-->88-->30-->70-->72-->37-->02-->18-->20-->20
 AVLTree - with left-right zigzag rotation(needs to be implemented)
 77-->88-->30-->70-->72-->37-->02-->18-->20-->19
+Heap-Sort
+4-->1-->3-->2-->16-->9-->10-->14-->8-->7
