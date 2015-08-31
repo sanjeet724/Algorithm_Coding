@@ -4,18 +4,21 @@ package Heaps;
 class Heap {
 	HeapItem [] items;
 	int index;
-	int size;
+	int size;     // the actual size of the heap
+	int capacity; // the size of the priority queue,capacity > size to allow insertions
 	
 	public Heap(int s){
+		this.capacity = s;
 		this.index = 0;
-		this.size = s;
-		this.items = new HeapItem[this.size];
+		this.size = 0;
+		this.items = new HeapItem[this.capacity];
 	}
 	
-	// This function is used to insert into the array
+	// This function is used to insert into the array(unordered)
 	public void addItem(HeapItem h) {
 		this.items[this.index] = h;
 		this.index++;
+		this.size++;
 	}
 	
 	// return the index of the left child
@@ -106,13 +109,12 @@ class Heap {
 	
 	public void IncreaseKey(int i, int value) {
 		// validate index first
-		if (i >= this.size || index < 0){
+		if (i >= this.capacity || index < 0){
 			System.out.println("Invalid Index of Item");
 			return;
 		}
 		// check if given key is valid
 		if (this.items[i].key >= value) {
-			System.out.println("Current Key is larger");
 			return;
 		}
 		this.items[i].key = value;
@@ -124,7 +126,13 @@ class Heap {
 			// reset the parent
 			i = parent(i);
 		}
-		
 	}
 	
+	public void InsertIntoHeap(int newKey){
+		System.out.println("Inserting into the heap: " + newKey);
+		this.size = this.size + 1;
+		HeapItem temp = new HeapItem(-999999);
+		this.items[this.size-1] = temp;
+		this.IncreaseKey(this.size-1, newKey);
+	}	
 }

@@ -8,27 +8,25 @@ public class HeapDriver {
 
 	public static void main(String[] args) throws IOException{
         // create a array for the heap
-		Heap heap = new Heap(10); // check input file for # of items
+		Heap heap = new Heap(20); // check input file for # of items
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
 		while (scanner.hasNextInt()){
 			HeapItem  heapItem = new HeapItem(scanner.nextInt());
-			System.out.println("Adding to the array: " + heapItem.key);
-			heap.addItem(heapItem);
+			 System.out.println("Adding to the array: " + heapItem.key);
+			 heap.addItem(heapItem); 
 		}
 		scanner.close(); 
-		heap.buildMaxHeap(); // build the heap first
-		// heap.heapSort();  // Heap Sort Algorithm
-		// some extractions and increasing the keys
+		heap.buildMaxHeap(); // build the heap
 		heap.IncreaseKey(9,96);
-		heap.printHeap();
 		heap.ExtractMax();
 		heap.ExtractMax();
 		heap.ExtractMax();
-		heap.printHeap();
 		heap.IncreaseKey(6,99);
-		heap.printHeap();
 		heap.ExtractMax();
-		heap.printHeap();
+		heap.InsertIntoHeap(45); // maintain the heap when new elements are added
+		heap.InsertIntoHeap(109);
+		heap.ExtractMax();
+		heap.heapSort();
 	}
 }
