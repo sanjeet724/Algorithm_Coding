@@ -8,7 +8,7 @@ public class HeapDriver {
 
 	public static void main(String[] args) throws IOException{
         // create a array for the heap
-		Heap heap = new Heap(20); // check input file for # of items
+		Heap heap = new Heap(); // check input file for # of items
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
 		while (scanner.hasNextInt()){
@@ -17,16 +17,7 @@ public class HeapDriver {
 			 heap.addItem(heapItem); 
 		}
 		scanner.close(); 
-		heap.buildMaxHeap(); // build the heap
-		heap.IncreaseKey(9,96);
-		heap.ExtractMax();
-		heap.ExtractMax();
-		heap.ExtractMax();
-		heap.IncreaseKey(6,99);
-		heap.ExtractMax();
-		heap.InsertIntoHeap(45); // maintain the heap when new elements are added
-		heap.InsertIntoHeap(109);
-		heap.ExtractMax();
-		heap.heapSort();
+		heap.buildMaxHeap(); 
+		heap.heapSort();		
 	}
 }

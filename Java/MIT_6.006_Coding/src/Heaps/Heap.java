@@ -1,24 +1,25 @@
+// Given Input : Array of some items with keys
+// Output - 1) A max heap 
+//        - 2) Heap Sort
 package Heaps;
 
-// Given Input - Collection of heap items
 class Heap {
 	HeapItem [] items;
 	int index;
-	int size;     // the actual size of the heap
-	int capacity; // the size of the priority queue,capacity > size to allow insertions
+	int size;      // the actual size of the heap
+	int capacity;  // the capacity of the heap
 	
-	public Heap(int s){
-		this.capacity = s;
+	public Heap(){
+		this.capacity = 25;
 		this.index = 0;
-		this.size = 0;
 		this.items = new HeapItem[this.capacity];
 	}
 	
-	// This function is used to insert into the array(unordered)
+	// Add items to the array
 	public void addItem(HeapItem h) {
 		this.items[this.index] = h;
-		this.index++;
 		this.size++;
+		this.index++;
 	}
 	
 	// return the index of the left child
@@ -31,15 +32,10 @@ class Heap {
 		return 2*index + 2;
 	}
 	
-	// return the index of the parent
-	private int parent(int index){
-		return (index - 1)/2;
-	}
-
 	
 	// create a heap from an un-Ordred array 
 	public void buildMaxHeap() {
-		System.out.println("Building the heap..");
+		System.out.println("Heapyfying the array");
 		for (int i = this.size/2 - 1 ; i >=0; i--) {
 			maxHeapify(this.items, i);
 		}
@@ -92,47 +88,5 @@ class Heap {
 		}
 		System.out.println();
 	}
-	
-	// extract and remove the maximum from the heap
-	// resize the heap
-	public HeapItem ExtractMax(){
-		// always create a new temporary variable rather tha just assigning
-		// learn from the mistakes of BST code
-		HeapItem max = new HeapItem(this.items[0].key);
-		this.items[0] = this.items[this.size-1];
-		this.items[this.size-1] = max;
-		this.size = this.size-1;
-		maxHeapify(this.items, 0);
-		System.out.println("Extracting Max: " + max.key);
-		return max;
-	}
-	
-	public void IncreaseKey(int i, int value) {
-		// validate index first
-		if (i >= this.capacity || index < 0){
-			System.out.println("Invalid Index of Item");
-			return;
-		}
-		// check if given key is valid
-		if (this.items[i].key >= value) {
-			return;
-		}
-		this.items[i].key = value;
-		while (i > 0 && this.items[parent(i)].key < this.items[i].key) {
-			// exchange a[i] with a[parent(i)]
-			HeapItem temp = new HeapItem(this.items[parent(i)].key);
-			this.items[parent(i)] = this.items[i];
-			this.items[i] = temp;
-			// reset the parent
-			i = parent(i);
-		}
-	}
-	
-	public void InsertIntoHeap(int newKey){
-		System.out.println("Inserting into the heap: " + newKey);
-		this.size = this.size + 1;
-		HeapItem temp = new HeapItem(-999999);
-		this.items[this.size-1] = temp;
-		this.IncreaseKey(this.size-1, newKey);
-	}	
+
 }
