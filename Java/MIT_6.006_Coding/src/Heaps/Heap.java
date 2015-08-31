@@ -29,14 +29,14 @@ class Heap {
 	}
 	
 	// return the index of the parent
-	/*
 	private int parent(int index){
 		return (index - 1)/2;
 	}
-	*/
+
 	
 	// create a heap from an un-Ordred array 
 	public void buildMaxHeap() {
+		System.out.println("Building the heap..");
 		for (int i = this.size/2 - 1 ; i >=0; i--) {
 			maxHeapify(this.items, i);
 		}
@@ -68,7 +68,7 @@ class Heap {
 	
 	public void heapSort(){
 		// first build the heap in case its not built
-		this.buildMaxHeap(); 
+		// this.buildMaxHeap(); 
 		System.out.println("Performing Heap-Sort");
 		while (this.size != 0){
 			// swap 1st element with last one
@@ -83,7 +83,7 @@ class Heap {
 	}
 	
 	public void printHeap() {
-		System.out.println("Heap Built: ");
+		System.out.println("Printing the heap..");
 		for (int i = 0; i < this.size ;i++){
 			System.out.printf("%d ", this.items[i].key);
 		}
@@ -100,7 +100,31 @@ class Heap {
 		this.items[this.size-1] = max;
 		this.size = this.size-1;
 		maxHeapify(this.items, 0);
+		System.out.println("Extracting Max: " + max.key);
 		return max;
+	}
+	
+	public void IncreaseKey(int i, int value) {
+		// validate index first
+		if (i >= this.size || index < 0){
+			System.out.println("Invalid Index of Item");
+			return;
+		}
+		// check if given key is valid
+		if (this.items[i].key >= value) {
+			System.out.println("Current Key is larger");
+			return;
+		}
+		this.items[i].key = value;
+		while (i > 0 && this.items[parent(i)].key < this.items[i].key) {
+			// exchange a[i] with a[parent(i)]
+			HeapItem temp = new HeapItem(this.items[parent(i)].key);
+			this.items[parent(i)] = this.items[i];
+			this.items[i] = temp;
+			// reset the parent
+			i = parent(i);
+		}
+		
 	}
 	
 }

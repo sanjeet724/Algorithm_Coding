@@ -13,14 +13,22 @@ public class HeapDriver {
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
 		while (scanner.hasNextInt()){
 			HeapItem  heapItem = new HeapItem(scanner.nextInt());
-			System.out.println("Inserting into heap: " + heapItem.key);
+			System.out.println("Adding to the array: " + heapItem.key);
 			heap.addItem(heapItem);
 		}
-		scanner.close();
+		scanner.close(); 
+		heap.buildMaxHeap(); // build the heap first
 		// heap.heapSort();  // Heap Sort Algorithm
-		heap.buildMaxHeap(); 
-		while(heap.size != 0){
-			System.out.println("Max is " + heap.ExtractMax().key);
-		}
+		// some extractions and increasing the keys
+		heap.IncreaseKey(9,96);
+		heap.printHeap();
+		heap.ExtractMax();
+		heap.ExtractMax();
+		heap.ExtractMax();
+		heap.printHeap();
+		heap.IncreaseKey(6,99);
+		heap.printHeap();
+		heap.ExtractMax();
+		heap.printHeap();
 	}
 }
