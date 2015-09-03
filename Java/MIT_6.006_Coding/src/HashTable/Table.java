@@ -19,8 +19,12 @@ public class Table {
 			this.hashTable[index] = h;
 		} 
 		else {
-			System.out.println("Collison during input");
-			// collisions
+			System.out.println("Collison detected...");
+			HashItem temp = this.hashTable[index];
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = h;
 		}
 	}
 	
@@ -33,6 +37,14 @@ public class Table {
 			}
 			else {
 				System.out.println("Item was overwritten: " + k);
+				HashItem temp = this.hashTable[index];
+				while (temp.next != null) {
+					if (temp.key == k){
+						System.out.println("Item was found in the list");
+						return;
+					}
+					temp = temp.next;
+				}
 				return;
 			}
 			//return this.hashTable[index];

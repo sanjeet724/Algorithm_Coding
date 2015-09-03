@@ -21,7 +21,7 @@ public class HashDriver {
 		Scanner scanner2 = new Scanner(new File("inputKeys.txt"));
 		System.out.println("Searching the table...");
 		while (scanner2.hasNextInt()){
-			// t.lookupItem(scanner2.nextInt());
+			t.lookupItem(scanner2.nextInt());
 	    }
 		scanner2.close();
 	}
