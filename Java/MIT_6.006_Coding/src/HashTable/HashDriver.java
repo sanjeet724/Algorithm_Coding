@@ -11,17 +11,17 @@ public class HashDriver {
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
 		Table t = new Table();
-		while (scanner.hasNextInt()){
+		while (scanner.hasNextInt()) {
 			int  i = scanner.nextInt();
 			HashItem h = new HashItem(i);
 			t.putItem(h);
-			//System.out.println("Adding to the Table: " + i);
+			// System.out.println("Adding to the Table: " + i);
 		}
 		scanner.close();
 		Scanner scanner2 = new Scanner(new File("inputKeys.txt"));
 		System.out.println("Searching the table...");
 		while (scanner2.hasNextInt()){
-			t.lookupItem(scanner2.nextInt());
+			 t.lookupItem(scanner2.nextInt());
 	    }
 		scanner2.close();
 	}

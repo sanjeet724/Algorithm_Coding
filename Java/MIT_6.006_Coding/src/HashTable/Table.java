@@ -1,7 +1,7 @@
 package HashTable;
 
 public class Table {
-	int m = 20;
+	int m = 17;
 	HashItem [] hashTable;
 	
 	public Table() {
@@ -19,7 +19,7 @@ public class Table {
 			this.hashTable[index] = h;
 		} 
 		else {
-			System.out.println("Collison detected...");
+			System.out.println("Collison detected at index: " + index);
 			HashItem temp = this.hashTable[index];
 			while (temp.next != null) {
 				temp = temp.next;
@@ -36,20 +36,21 @@ public class Table {
 				return;
 			}
 			else {
-				System.out.println("Item was overwritten: " + k);
+				System.out.println("Item was chained: " + k);
 				HashItem temp = this.hashTable[index];
-				while (temp.next != null) {
+				while (temp != null) {
 					if (temp.key == k){
 						System.out.println("Item was found in the list");
 						return;
 					}
 					temp = temp.next;
 				}
+				System.out.println("Item was not found in the list");
 				return;
 			}
 			//return this.hashTable[index];
 		}
-		System.out.println("Item Not Found: " + k);
+		System.out.println("Key Not Found: " + k);
 		return;
 		//return null;
 	}
