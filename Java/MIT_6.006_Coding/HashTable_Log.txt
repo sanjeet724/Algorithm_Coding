@@ -1,0 +1,12 @@
+Inserting key->88 at index: 12
+Inserting key->11 at index: 11
+Collison detected at index: 12
+Key->12 chained at index: 12
+Inserting key->55 at index: 17
+Inserting key->63 at index: 6
+Inserting key->47 at index: 9
+Collison detected at index: 17
+Key->36 chained at index: 17
+Inserting key->23 at index: 4
+Inserting key->32 at index: 13
+Inserting key->62 at index: 5
