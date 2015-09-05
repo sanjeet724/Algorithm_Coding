@@ -17,7 +17,7 @@ public class HashDriver {
 			t.putItem(h);
 		}
 		scanner.close();
-		System.out.println("Searching the table...");
+		t.lookupItem(95);
 		t.writer.close();
 	}
 }

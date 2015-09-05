@@ -28,15 +28,19 @@ public class Table {
 		else {
 			writer.println("Collison detected at index: " + index);
 			HashItem temp = this.hashTable[index];
+			writer.printf("%d--->",temp.key);
 			while (temp.next != null) {
+				writer.printf("%d--->",temp.next.key);
 				temp = temp.next;
 			}
 			temp.next = h;
-			writer.println("Key->" + h.key + " chained at index: " + index);
+			writer.println(h.key);
 		}
 	}
 	
 	public HashItem lookupItem(int k) {
+		writer.println();
+		writer.println("Searching for key: " + k + "---->");
 		int index = this.getHashKey(k);
 		if (this.hashTable[index] != null) {
 			if (this.hashTable[index].key == k) {

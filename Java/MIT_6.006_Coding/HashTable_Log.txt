@@ -1,12 +1,32 @@
-Inserting key->88 at index: 12
-Inserting key->11 at index: 11
-Collison detected at index: 12
-Key->12 chained at index: 12
-Inserting key->55 at index: 17
-Inserting key->63 at index: 6
-Inserting key->47 at index: 9
+Inserting key->70 at index: 13
+Inserting key->38 at index: 0
+Collison detected at index: 13
+70--->70
+Inserting key->74 at index: 17
+Inserting key->8 at index: 8
 Collison detected at index: 17
-Key->36 chained at index: 17
+74--->74
+Inserting key->96 at index: 1
+Collison detected at index: 0
+38--->38
+Collison detected at index: 13
+70--->70--->89
+Collison detected at index: 8
+8--->8
+Collison detected at index: 8
+8--->8--->27
+Collison detected at index: 0
+38--->38--->76
+Inserting key->82 at index: 6
+Collison detected at index: 0
+38--->38--->76--->95
+Inserting key->15 at index: 15
+Collison detected at index: 17
+74--->74--->36
+Inserting key->68 at index: 11
 Inserting key->23 at index: 4
-Inserting key->32 at index: 13
-Inserting key->62 at index: 5
+Inserting key->35 at index: 16
+Inserting key->60 at index: 3
+
+Searching for key: 95---->
+Item was chained at index: 0

@@ -7,7 +7,7 @@ public class RandomInputGenerator {
 
 	public static void main(String[] args) throws IOException {
 		Random randomGenerator = new Random();
-		int sizeOfInput = 10;
+		int sizeOfInput = 20;
 		System.out.println("Generating some random inputs: ");
 		PrintWriter writer = new PrintWriter("inputKeys.txt", "UTF-8");
 		for (int i = 0; i < sizeOfInput; i++){
