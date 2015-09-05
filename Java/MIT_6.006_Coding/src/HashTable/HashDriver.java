@@ -10,7 +10,7 @@ public class HashDriver {
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
 		Table t = new Table();
-		System.out.println("Adding items to the Table...");
+		System.out.println("Adding some items to the Table");
 		while (scanner.hasNextInt()) {
 			int  i = scanner.nextInt();
 			HashItem h = new HashItem(i);
@@ -18,6 +18,7 @@ public class HashDriver {
 		}
 		scanner.close();
 		t.lookupItem(95);
-		t.writer.close();
+		t.TableStats();
+		t.writer.close(); // the log file for the hash table
 	}
 }

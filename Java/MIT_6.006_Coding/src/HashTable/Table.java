@@ -6,12 +6,16 @@ import java.io.PrintWriter;
 
 public class Table {
 	PrintWriter writer;
-	int m = 19;
-	HashItem [] hashTable;
+	int m = 503; // table size
+	int n = 0;  // # of items in table
+	int occupied; // # of occupied slots
+	HashItem [] hashTable; 
 	
 	public Table() throws IOException{
 		this.writer = new PrintWriter("HashTable_Log.txt", "UTF-8");
 		this.hashTable = new HashItem[this.m];
+		this.occupied = 0;
+		this.n = 0;
 	}
 	
 	private int getHashKey(int n) {
@@ -19,11 +23,13 @@ public class Table {
 	}
 	
 	public void putItem(HashItem h) {
+		this.n++;
 		int index = this.getHashKey(h.key);
 		if ( this.hashTable[index] == null ){
-			writer.printf("Inserting key->%d at index: %d",h.key,index);
+			writer.printf("Inserting key->%03d at index: %03d",h.key,index);
 			writer.println();
 			this.hashTable[index] = h;
+			this.occupied++;
 		} 
 		else {
 			writer.println("Collison detected at index: " + index);
@@ -63,5 +69,20 @@ public class Table {
 		System.out.println("Key Not Found in the Table: " + k);
 		return null;
 	}
+	
+	public void TableStats(){
+		writer.println();
+		writer.println("***Table Stats***");
+		writer.println("Table Size: " + this.m);
+		writer.println("Total # of items: " + this.n);
+		writer.println("Occupied Slots in Table: " + this.occupied);
+		writer.println("Free slots in the table(if any): ");
+		for (int i = 0; i < this.m; i++){
+			if (this.hashTable[i] == null){
+				writer.println("Free Slot at index: " + i);
+			}
+		}
+	}
+	
 	
 }

@@ -1,32 +1,883 @@
-Inserting key->70 at index: 13
-Inserting key->38 at index: 0
-Collison detected at index: 13
-70--->70
-Inserting key->74 at index: 17
-Inserting key->8 at index: 8
+Inserting key->746511 at index: 059
+Inserting key->356496 at index: 372
+Inserting key->739776 at index: 366
+Inserting key->879167 at index: 426
+Inserting key->910058 at index: 131
+Inserting key->397514 at index: 144
+Inserting key->624446 at index: 223
+Inserting key->29059 at index: 388
+Inserting key->271099 at index: 485
+Inserting key->643395 at index: 058
+Inserting key->118386 at index: 181
+Inserting key->645584 at index: 235
+Inserting key->396640 at index: 276
+Inserting key->716614 at index: 342
+Inserting key->132466 at index: 177
+Inserting key->533182 at index: 002
+Inserting key->500702 at index: 217
+Inserting key->732822 at index: 454
+Inserting key->772473 at index: 368
+Inserting key->845790 at index: 247
+Inserting key->586402 at index: 407
+Inserting key->470288 at index: 486
+Inserting key->31094 at index: 411
+Inserting key->793307 at index: 076
+Inserting key->928867 at index: 329
+Inserting key->530268 at index: 106
+Inserting key->770497 at index: 404
+Inserting key->191244 at index: 104
+Inserting key->628579 at index: 332
+Inserting key->341455 at index: 421
+Inserting key->882664 at index: 402
+Inserting key->352474 at index: 374
+Inserting key->565139 at index: 270
+Inserting key->869857 at index: 170
+Inserting key->304744 at index: 429
+Inserting key->547657 at index: 393
+Inserting key->28630 at index: 462
+Inserting key->767046 at index: 474
+Inserting key->210551 at index: 297
+Collison detected at index: 485
+271099--->608612
+Inserting key->789278 at index: 071
+Inserting key->852586 at index: 001
+Inserting key->135678 at index: 371
+Inserting key->882121 at index: 362
+Inserting key->709811 at index: 078
+Inserting key->244942 at index: 484
+Inserting key->212645 at index: 379
+Inserting key->676622 at index: 087
+Inserting key->705042 at index: 339
+Inserting key->523322 at index: 202
+Inserting key->825030 at index: 110
+Inserting key->307215 at index: 385
+Collison detected at index: 297
+210551--->740210
+Inserting key->935646 at index: 066
+Inserting key->859203 at index: 079
+Inserting key->75606 at index: 156
+Inserting key->219553 at index: 245
+Inserting key->615689 at index: 017
+Inserting key->13683 at index: 102
+Inserting key->820133 at index: 243
+Inserting key->860621 at index: 491
+Inserting key->246981 at index: 008
+Inserting key->424247 at index: 218
+Inserting key->45154 at index: 387
+Inserting key->399135 at index: 256
+Collison detected at index: 484
+244942--->917453
+Collison detected at index: 379
+212645--->716651
+Inserting key->568160 at index: 273
+Inserting key->433922 at index: 336
+Inserting key->592875 at index: 341
+Collison detected at index: 79
+859203--->401976
+Inserting key->229382 at index: 014
+Inserting key->697474 at index: 316
+Inserting key->434866 at index: 274
+Inserting key->148551 at index: 166
+Collison detected at index: 276
+396640--->775902
+Inserting key->564303 at index: 440
+Inserting key->268117 at index: 018
 Collison detected at index: 17
-74--->74
-Inserting key->96 at index: 1
-Collison detected at index: 0
-38--->38
-Collison detected at index: 13
-70--->70--->89
+615689--->221840
+Inserting key->751996 at index: 011
+Inserting key->394272 at index: 423
+Collison detected at index: 245
+219553--->355363
+Collison detected at index: 76
+793307--->239504
+Inserting key->344072 at index: 020
+Inserting key->638068 at index: 264
+Inserting key->652192 at index: 304
+Inserting key->557593 at index: 269
+Inserting key->686059 at index: 470
+Inserting key->834867 at index: 390
+Inserting key->940737 at index: 127
+Inserting key->786051 at index: 365
+Inserting key->715154 at index: 391
+Inserting key->468340 at index: 047
+Collison detected at index: 362
+882121--->474691
+Collison detected at index: 11
+751996--->894848
+Collison detected at index: 76
+793307--->239504--->560418
+Inserting key->97112 at index: 033
+Inserting key->359784 at index: 139
+Inserting key->242126 at index: 183
+Inserting key->528120 at index: 473
+Inserting key->427283 at index: 236
+Inserting key->744079 at index: 142
+Collison detected at index: 139
+359784--->300933
+Inserting key->708443 at index: 219
+Inserting key->400395 at index: 007
+Inserting key->239855 at index: 427
+Inserting key->321040 at index: 126
+Inserting key->236225 at index: 318
+Inserting key->133976 at index: 178
+Inserting key->138288 at index: 466
+Inserting key->911416 at index: 483
+Inserting key->380667 at index: 399
+Inserting key->279660 at index: 495
+Inserting key->584101 at index: 118
+Inserting key->210460 at index: 206
 Collison detected at index: 8
-8--->8
+246981--->154429
+Inserting key->812428 at index: 083
+Inserting key->221098 at index: 281
+Inserting key->595645 at index: 093
+Inserting key->144590 at index: 229
+Inserting key->64572 at index: 188
+Inserting key->240215 at index: 284
+Inserting key->585974 at index: 482
+Inserting key->251976 at index: 476
+Inserting key->833017 at index: 049
+Inserting key->297118 at index: 348
+Inserting key->84617 at index: 113
+Inserting key->15565 at index: 475
+Collison detected at index: 113
+84617--->584096
+Inserting key->382535 at index: 255
+Inserting key->745043 at index: 100
+Inserting key->252550 at index: 044
+Inserting key->398060 at index: 187
+Inserting key->208772 at index: 027
+Inserting key->526562 at index: 424
+Inserting key->227481 at index: 125
+Inserting key->944541 at index: 410
+Inserting key->227891 at index: 032
+Inserting key->536669 at index: 471
+Inserting key->185767 at index: 160
+Inserting key->10675 at index: 112
+Collison detected at index: 318
+236225--->308657
 Collison detected at index: 8
-8--->8--->27
-Collison detected at index: 0
-38--->38--->76
-Inserting key->82 at index: 6
-Collison detected at index: 0
-38--->38--->76--->95
-Inserting key->15 at index: 15
+246981--->154429--->474337
+Inserting key->681726 at index: 161
+Inserting key->241753 at index: 313
+Inserting key->537557 at index: 353
+Inserting key->585837 at index: 345
+Inserting key->905442 at index: 042
+Collison detected at index: 470
+686059--->740383
+Inserting key->27408 at index: 246
+Inserting key->12275 at index: 203
+Inserting key->709427 at index: 197
+Collison detected at index: 170
+869857--->125920
+Inserting key->337503 at index: 493
+Inserting key->504463 at index: 457
+Inserting key->920123 at index: 136
+Inserting key->806083 at index: 277
+Inserting key->541226 at index: 501
+Collison detected at index: 304
+652192--->509843
+Collison detected at index: 362
+882121--->474691--->702550
+Inserting key->939164 at index: 063
+Inserting key->128061 at index: 299
+Collison detected at index: 160
+185767--->116353
+Collison detected at index: 276
+396640--->775902--->534462
+Inserting key->854130 at index: 036
+Inserting key->63904 at index: 023
+Inserting key->305746 at index: 425
+Inserting key->603379 at index: 282
+Inserting key->719452 at index: 162
+Inserting key->338900 at index: 381
 Collison detected at index: 17
-74--->74--->36
-Inserting key->68 at index: 11
-Inserting key->23 at index: 4
-Inserting key->35 at index: 16
-Inserting key->60 at index: 3
+615689--->221840--->87539
+Inserting key->378755 at index: 499
+Inserting key->89220 at index: 189
+Inserting key->682861 at index: 290
+Inserting key->336079 at index: 075
+Inserting key->306107 at index: 283
+Collison detected at index: 482
+585974--->184077
+Collison detected at index: 87
+676622--->941703
+Inserting key->502471 at index: 477
+Inserting key->829034 at index: 090
+Inserting key->337425 at index: 415
+Inserting key->29670 at index: 496
+Inserting key->532159 at index: 488
+Inserting key->524558 at index: 432
+Inserting key->600515 at index: 436
+Inserting key->412014 at index: 057
+Inserting key->984850 at index: 479
+Inserting key->206046 at index: 319
+Inserting key->82292 at index: 303
+Collison detected at index: 477
+502471--->428027
+Inserting key->447013 at index: 349
+Inserting key->182259 at index: 173
+Collison detected at index: 385
+307215--->362545
+Inserting key->542302 at index: 068
+Inserting key->714265 at index: 005
+Collison detected at index: 131
+910058--->27796
+Inserting key->330697 at index: 226
+Inserting key->327413 at index: 463
+Inserting key->501146 at index: 158
+Collison detected at index: 110
+825030--->777245
+Inserting key->516587 at index: 006
+Inserting key->721254 at index: 455
+Inserting key->907348 at index: 439
+Collison detected at index: 318
+236225--->308657--->911754
+Inserting key->864238 at index: 084
+Inserting key->56696 at index: 360
+Inserting key->481734 at index: 363
+Inserting key->670181 at index: 185
+Inserting key->043 at index: 043
+Inserting key->784717 at index: 037
+Collison detected at index: 118
+584101--->426159
+Inserting key->56650 at index: 314
+Inserting key->945669 at index: 029
+Inserting key->400960 at index: 069
+Collison detected at index: 463
+327413--->235364
+Collison detected at index: 363
+481734--->627604
+Collison detected at index: 127
+940737--->968905
+Inserting key->752279 at index: 294
+Inserting key->579075 at index: 122
+Collison detected at index: 219
+708443--->425254
+Inserting key->470128 at index: 326
+Collison detected at index: 187
+398060--->244645
+Collison detected at index: 270
+565139--->537474
+Inserting key->998232 at index: 280
+Collison detected at index: 385
+307215--->362545--->708609
+Inserting key->466367 at index: 086
+Inserting key->79905 at index: 431
+Inserting key->946555 at index: 412
+Inserting key->311635 at index: 278
+Collison detected at index: 495
+279660--->434584
+Inserting key->390590 at index: 262
+Inserting key->747339 at index: 384
+Collison detected at index: 1
+852586--->458737
+Inserting key->833532 at index: 061
+Inserting key->868167 at index: 492
+Collison detected at index: 411
+31094--->299696
+Collison detected at index: 439
+907348--->109590
+Inserting key->361317 at index: 163
+Inserting key->322761 at index: 338
+Inserting key->359601 at index: 459
+Inserting key->74775 at index: 331
+Collison detected at index: 69
+400960--->329534
+Inserting key->200359 at index: 165
+Inserting key->229238 at index: 373
+Collison detected at index: 496
+29670--->394848
+Collison detected at index: 245
+219553--->355363--->50545
+Inserting key->620327 at index: 128
+Inserting key->272503 at index: 380
+Inserting key->984726 at index: 355
+Inserting key->547183 at index: 422
+Inserting key->89575 at index: 041
+Collison detected at index: 475
+15565--->670471
+Inserting key->219484 at index: 176
+Inserting key->917692 at index: 220
+Inserting key->220909 at index: 092
+Inserting key->882487 at index: 225
+Inserting key->810225 at index: 395
+Collison detected at index: 360
+56696--->747315
+Collison detected at index: 113
+84617--->584096--->212379
+Inserting key->213864 at index: 089
+Inserting key->447351 at index: 184
+Inserting key->113118 at index: 446
+Inserting key->932737 at index: 175
+Collison detected at index: 47
+468340--->393393
+Collison detected at index: 363
+481734--->627604--->352463
+Inserting key->873578 at index: 370
+Inserting key->104781 at index: 157
+Collison detected at index: 319
+206046--->695465
+Collison detected at index: 314
+56650--->838815
+Collison detected at index: 92
+220909--->580554
+Inserting key->34525 at index: 321
+Inserting key->347089 at index: 019
+Inserting key->481909 at index: 035
+Collison detected at index: 404
+770497--->49195
+Inserting key->48501 at index: 213
+Inserting key->460769 at index: 021
+Inserting key->590469 at index: 450
+Inserting key->545999 at index: 244
+Collison detected at index: 178
+133976--->671180
+Inserting key->276141 at index: 497
+Collison detected at index: 246
+27408--->310094
+Inserting key->32009 at index: 320
+Collison detected at index: 47
+468340--->393393--->675073
+Collison detected at index: 318
+236225--->308657--->911754--->61684
+Inserting key->311963 at index: 103
+Inserting key->353683 at index: 074
+Collison detected at index: 501
+541226--->641323
+Inserting key->613509 at index: 352
+Inserting key->983462 at index: 097
+Collison detected at index: 102
+13683--->691727
+Inserting key->374030 at index: 301
+Collison detected at index: 6
+516587--->900879
+Inserting key->301527 at index: 230
+Collison detected at index: 158
+501146--->980505
+Inserting key->620585 at index: 386
+Inserting key->490115 at index: 193
+Inserting key->911082 at index: 149
+Inserting key->178565 at index: 000
+Collison detected at index: 185
+670181--->984556
+Collison detected at index: 425
+305746--->125672
+Inserting key->713582 at index: 328
+Collison detected at index: 355
+984726--->338874
+Collison detected at index: 166
+148551--->949830
+Inserting key->249659 at index: 171
+Collison detected at index: 223
+624446--->35433
+Collison detected at index: 14
+229382--->259562
+Collison detected at index: 219
+708443--->425254--->264797
+Inserting key->560640 at index: 298
+Inserting key->109337 at index: 186
+Inserting key->981357 at index: 004
+Collison detected at index: 316
+697474--->900183
+Inserting key->581673 at index: 205
+Inserting key->376085 at index: 344
+Collison detected at index: 149
+911082--->770745
+Inserting key->891029 at index: 216
+Collison detected at index: 57
+412014--->112226
+Inserting key->677650 at index: 109
+Inserting key->615360 at index: 191
+Collison detected at index: 294
+752279--->800064
+Inserting key->882679 at index: 417
+Collison detected at index: 185
+670181--->984556--->192834
+Inserting key->54822 at index: 498
+Inserting key->233083 at index: 194
+Inserting key->828195 at index: 257
+Collison detected at index: 66
+935646--->492503
+Inserting key->860254 at index: 124
+Collison detected at index: 142
+744079--->566520
+Inserting key->95734 at index: 164
+Collison detected at index: 43
+43--->851622
+Inserting key->272480 at index: 357
+Inserting key->72166 at index: 237
+Inserting key->484449 at index: 060
+Inserting key->733158 at index: 287
+Inserting key->261576 at index: 016
+Inserting key->554056 at index: 253
+Collison detected at index: 386
+620585--->367073
+Collison detected at index: 332
+628579--->200023
+Collison detected at index: 316
+697474--->900183--->707534
+Inserting key->531617 at index: 449
+Inserting key->478790 at index: 437
+Inserting key->903999 at index: 108
+Collison detected at index: 491
+860621--->598558
+Collison detected at index: 412
+946555--->845452
+Collison detected at index: 486
+470288--->362143
+Collison detected at index: 466
+138288--->537167
+Inserting key->424020 at index: 494
+Collison detected at index: 90
+829034--->210344
+Inserting key->494852 at index: 403
+Inserting key->505317 at index: 305
+Collison detected at index: 160
+185767--->116353--->512214
+Inserting key->344880 at index: 325
+Collison detected at index: 245
+219553--->355363--->50545--->296512
+Inserting key->945963 at index: 323
+Inserting key->405069 at index: 154
+Collison detected at index: 245
+219553--->355363--->50545--->296512--->372968
+Collison detected at index: 344
+376085--->293593
+Inserting key->683676 at index: 099
+Collison detected at index: 68
+542302--->983936
+Collison detected at index: 157
+104781--->978995
+Inserting key->966205 at index: 445
+Collison detected at index: 187
+398060--->244645--->927719
+Inserting key->80847 at index: 367
+Collison detected at index: 387
+45154--->576322
+Collison detected at index: 149
+911082--->770745--->379914
+Collison detected at index: 158
+501146--->980505--->339180
+Collison detected at index: 127
+940737--->968905--->71050
+Collison detected at index: 326
+470128--->889127
+Collison detected at index: 463
+327413--->235364--->341497
+Inserting key->340067 at index: 039
+Inserting key->209452 at index: 204
+Collison detected at index: 411
+31094--->299696--->219719
+Collison detected at index: 183
+242126--->140520
+Collison detected at index: 243
+820133--->530908
+Collison detected at index: 374
+352474--->551159
+Inserting key->511086 at index: 038
+Inserting key->889860 at index: 053
+Inserting key->32481 at index: 289
+Inserting key->293549 at index: 300
+Collison detected at index: 90
+829034--->210344--->831549
+Collison detected at index: 303
+82292--->760336
+Collison detected at index: 486
+470288--->362143--->897335
+Collison detected at index: 5
+714265--->445160
+Collison detected at index: 128
+620327--->89662
+Collison detected at index: 20
+344072--->321940
+Collison detected at index: 466
+138288--->537167--->430531
+Inserting key->344471 at index: 419
+Collison detected at index: 213
+48501--->171736
+Inserting key->929572 at index: 028
+Collison detected at index: 247
+845790--->99338
+Inserting key->395733 at index: 375
+Inserting key->838046 at index: 048
+Inserting key->57035 at index: 196
+Collison detected at index: 484
+244942--->917453--->738385
+Collison detected at index: 125
+227481--->727463
+Collison detected at index: 196
+57035--->118401
+Collison detected at index: 497
+276141--->320405
+Collison detected at index: 411
+31094--->299696--->219719--->350499
+Collison detected at index: 237
+72166--->709970
+Collison detected at index: 492
+868167--->108134
+Collison detected at index: 341
+592875--->663798
+Collison detected at index: 437
+478790--->147313
+Collison detected at index: 373
+229238--->924887
+Collison detected at index: 112
+10675--->184210
+Collison detected at index: 29
+945669--->536730
+Inserting key->389395 at index: 073
+Collison detected at index: 49
+833017--->806861
+Inserting key->328002 at index: 046
+Collison detected at index: 373
+229238--->924887--->782538
+Collison detected at index: 352
+613509--->561197
+Collison detected at index: 216
+891029--->711961
+Collison detected at index: 5
+714265--->445160--->163480
+Inserting key->652280 at index: 392
+Collison detected at index: 345
+585837--->618029
+Collison detected at index: 426
+879167--->567307
+Collison detected at index: 191
+615360--->973999
+Collison detected at index: 245
+219553--->355363--->50545--->296512--->372968--->498215
+Collison detected at index: 352
+613509--->561197--->249840
+Collison detected at index: 48
+838046--->816920
+Inserting key->564495 at index: 129
+Collison detected at index: 410
+944541--->367097
+Collison detected at index: 218
+424247--->824132
+Inserting key->79280 at index: 309
+Inserting key->707708 at index: 490
+Collison detected at index: 474
+767046--->919958
+Collison detected at index: 166
+148551--->949830--->119880
+Inserting key->432956 at index: 376
+Inserting key->688745 at index: 138
+Inserting key->916919 at index: 453
+Collison detected at index: 188
+64572--->666160
+Inserting key->462198 at index: 444
+Inserting key->922442 at index: 443
+Inserting key->670220 at index: 224
+Inserting key->668837 at index: 350
+Collison detected at index: 44
+252550--->647908
+Collison detected at index: 127
+940737--->968905--->71050--->543367
+Collison detected at index: 87
+676622--->941703--->7632
+Collison detected at index: 237
+72166--->709970--->98825
+Collison detected at index: 407
+586402--->610546
+Collison detected at index: 78
+709811--->508108
+Collison detected at index: 454
+732822--->760487
+Inserting key->377304 at index: 054
+Collison detected at index: 350
+668837--->78315
+Collison detected at index: 102
+13683--->691727--->950269
+Collison detected at index: 445
+966205--->727280
+Collison detected at index: 144
+397514--->284842
+Inserting key->878740 at index: 502
+Collison detected at index: 213
+48501--->171736--->465991
+Collison detected at index: 289
+32481--->461037
+Collison detected at index: 309
+79280--->531477
+Collison detected at index: 79
+859203--->401976--->174117
+Inserting key->208658 at index: 416
+Inserting key->316556 at index: 169
+Collison detected at index: 243
+820133--->530908--->758767
+Collison detected at index: 118
+584101--->426159--->966884
+Collison detected at index: 273
+568160--->551058
+Collison detected at index: 102
+13683--->691727--->950269--->187218
+Collison detected at index: 60
+484449--->215344
+Collison detected at index: 399
+380667--->28064
+Collison detected at index: 109
+677650--->539325
+Collison detected at index: 181
+118386--->65571
+Inserting key->609142 at index: 009
+Collison detected at index: 245
+219553--->355363--->50545--->296512--->372968--->498215--->453448
+Inserting key->199447 at index: 259
+Collison detected at index: 194
+233083--->934768
+Collison detected at index: 27
+208772--->350115
+Collison detected at index: 32
+227891--->21158
+Collison detected at index: 246
+27408--->310094--->469545
+Inserting key->494461 at index: 012
+Inserting key->755745 at index: 239
+Collison detected at index: 445
+966205--->727280--->766011
+Collison detected at index: 450
+590469--->468240
+Collison detected at index: 104
+191244--->166094
+Inserting key->318598 at index: 199
+Inserting key->640887 at index: 065
+Collison detected at index: 165
+200359--->621873
+Inserting key->120365 at index: 148
+Collison detected at index: 245
+219553--->355363--->50545--->296512--->372968--->498215--->453448--->5778
+Collison detected at index: 69
+400960--->329534--->539285
+Inserting key->855818 at index: 215
+Collison detected at index: 436
+600515--->298715
+Collison detected at index: 244
+545999--->438357
+Collison detected at index: 79
+859203--->401976--->174117--->296849
+Inserting key->401380 at index: 489
+Collison detected at index: 253
+554056--->585745
+Inserting key->163118 at index: 146
+Inserting key->671047 at index: 045
+Inserting key->165797 at index: 310
+Collison detected at index: 17
+615689--->221840--->87539--->16113
+Inserting key->127534 at index: 275
+Collison detected at index: 365
+786051--->601450
+Collison detected at index: 17
+615689--->221840--->87539--->16113--->362177
+Collison detected at index: 474
+767046--->919958--->473294
+Inserting key->227546 at index: 190
+Inserting key->182365 at index: 279
+Collison detected at index: 373
+229238--->924887--->782538--->34577
+Collison detected at index: 41
+89575--->119252
+Collison detected at index: 362
+882121--->474691--->702550--->645711
+Inserting key->545393 at index: 141
+Inserting key->962940 at index: 198
+Collison detected at index: 264
+638068--->886550
 
 Searching for key: 95---->
-Item was chained at index: 0
+
+***Table Stats***
+Table Size: 503
+Total # of items: 500
+Occupied Slots in Table: 314
+Free slots in the table(if any): 
+Free Slot at index: 3
+Free Slot at index: 10
+Free Slot at index: 13
+Free Slot at index: 15
+Free Slot at index: 22
+Free Slot at index: 24
+Free Slot at index: 25
+Free Slot at index: 26
+Free Slot at index: 30
+Free Slot at index: 31
+Free Slot at index: 34
+Free Slot at index: 40
+Free Slot at index: 50
+Free Slot at index: 51
+Free Slot at index: 52
+Free Slot at index: 55
+Free Slot at index: 56
+Free Slot at index: 62
+Free Slot at index: 64
+Free Slot at index: 67
+Free Slot at index: 70
+Free Slot at index: 72
+Free Slot at index: 77
+Free Slot at index: 80
+Free Slot at index: 81
+Free Slot at index: 82
+Free Slot at index: 85
+Free Slot at index: 88
+Free Slot at index: 91
+Free Slot at index: 94
+Free Slot at index: 95
+Free Slot at index: 96
+Free Slot at index: 98
+Free Slot at index: 101
+Free Slot at index: 105
+Free Slot at index: 107
+Free Slot at index: 111
+Free Slot at index: 114
+Free Slot at index: 115
+Free Slot at index: 116
+Free Slot at index: 117
+Free Slot at index: 119
+Free Slot at index: 120
+Free Slot at index: 121
+Free Slot at index: 123
+Free Slot at index: 130
+Free Slot at index: 132
+Free Slot at index: 133
+Free Slot at index: 134
+Free Slot at index: 135
+Free Slot at index: 137
+Free Slot at index: 140
+Free Slot at index: 143
+Free Slot at index: 145
+Free Slot at index: 147
+Free Slot at index: 150
+Free Slot at index: 151
+Free Slot at index: 152
+Free Slot at index: 153
+Free Slot at index: 155
+Free Slot at index: 159
+Free Slot at index: 167
+Free Slot at index: 168
+Free Slot at index: 172
+Free Slot at index: 174
+Free Slot at index: 179
+Free Slot at index: 180
+Free Slot at index: 182
+Free Slot at index: 192
+Free Slot at index: 195
+Free Slot at index: 200
+Free Slot at index: 201
+Free Slot at index: 207
+Free Slot at index: 208
+Free Slot at index: 209
+Free Slot at index: 210
+Free Slot at index: 211
+Free Slot at index: 212
+Free Slot at index: 214
+Free Slot at index: 221
+Free Slot at index: 222
+Free Slot at index: 227
+Free Slot at index: 228
+Free Slot at index: 231
+Free Slot at index: 232
+Free Slot at index: 233
+Free Slot at index: 234
+Free Slot at index: 238
+Free Slot at index: 240
+Free Slot at index: 241
+Free Slot at index: 242
+Free Slot at index: 248
+Free Slot at index: 249
+Free Slot at index: 250
+Free Slot at index: 251
+Free Slot at index: 252
+Free Slot at index: 254
+Free Slot at index: 258
+Free Slot at index: 260
+Free Slot at index: 261
+Free Slot at index: 263
+Free Slot at index: 265
+Free Slot at index: 266
+Free Slot at index: 267
+Free Slot at index: 268
+Free Slot at index: 271
+Free Slot at index: 272
+Free Slot at index: 285
+Free Slot at index: 286
+Free Slot at index: 288
+Free Slot at index: 291
+Free Slot at index: 292
+Free Slot at index: 293
+Free Slot at index: 295
+Free Slot at index: 296
+Free Slot at index: 302
+Free Slot at index: 306
+Free Slot at index: 307
+Free Slot at index: 308
+Free Slot at index: 311
+Free Slot at index: 312
+Free Slot at index: 315
+Free Slot at index: 317
+Free Slot at index: 322
+Free Slot at index: 324
+Free Slot at index: 327
+Free Slot at index: 330
+Free Slot at index: 333
+Free Slot at index: 334
+Free Slot at index: 335
+Free Slot at index: 337
+Free Slot at index: 340
+Free Slot at index: 343
+Free Slot at index: 346
+Free Slot at index: 347
+Free Slot at index: 351
+Free Slot at index: 354
+Free Slot at index: 356
+Free Slot at index: 358
+Free Slot at index: 359
+Free Slot at index: 361
+Free Slot at index: 364
+Free Slot at index: 369
+Free Slot at index: 377
+Free Slot at index: 378
+Free Slot at index: 382
+Free Slot at index: 383
+Free Slot at index: 389
+Free Slot at index: 394
+Free Slot at index: 396
+Free Slot at index: 397
+Free Slot at index: 398
+Free Slot at index: 400
+Free Slot at index: 401
+Free Slot at index: 405
+Free Slot at index: 406
+Free Slot at index: 408
+Free Slot at index: 409
+Free Slot at index: 413
+Free Slot at index: 414
+Free Slot at index: 418
+Free Slot at index: 420
+Free Slot at index: 428
+Free Slot at index: 430
+Free Slot at index: 433
+Free Slot at index: 434
+Free Slot at index: 435
+Free Slot at index: 438
+Free Slot at index: 441
+Free Slot at index: 442
+Free Slot at index: 447
+Free Slot at index: 448
+Free Slot at index: 451
+Free Slot at index: 452
+Free Slot at index: 456
+Free Slot at index: 458
+Free Slot at index: 460
+Free Slot at index: 461
+Free Slot at index: 464
+Free Slot at index: 465
+Free Slot at index: 467
+Free Slot at index: 468
+Free Slot at index: 469
+Free Slot at index: 472
+Free Slot at index: 478
+Free Slot at index: 480
+Free Slot at index: 481
+Free Slot at index: 487
+Free Slot at index: 500
