@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public class Table {
 	PrintWriter writer;
-	int m = 5;     // table size
+	int m = 5;      // table size
 	int n = 0;      // # of items in table
 	int occupied;   // # of occupied slots
 	HashItem [] hashTable; 
@@ -18,18 +18,11 @@ public class Table {
 		this.n = 0;
 	}
 	
-	
 	private int getHashIndex(int k) {
 		return k % this.m;
 	}
 	
 	public void putItem(HashItem h) {
-		// Table Doubling
-		if (this.n > this.m) {
-			writer.println("n is: " + this.n);
-			writer.println("m is: " + this.m);
-			this.tableDoubling();
-		}
 		this.n++;
 		int index = this.getHashIndex(h.key);
 		if ( this.hashTable[index] == null ){
@@ -39,7 +32,7 @@ public class Table {
 			this.occupied++;
 		} 
 		else {
-			writer.println("Collison detected at index: " + index);
+			writer.println("Collision detected at index: " + index);
 			HashItem temp = this.hashTable[index];
 			writer.printf("%d--->",temp.key);
 			while (temp.next != null) {
@@ -48,6 +41,12 @@ public class Table {
 			}
 			temp.next = h;
 			writer.println(h.key);
+		}
+		// Table Doubling
+		if (this.n == this.m) {
+			writer.println("n is: " + this.n);
+			writer.println("m is: " + this.m);
+			this.tableDoubling();
 		}
 	}
 	
@@ -77,22 +76,52 @@ public class Table {
 		return null;
 	}
 	
-	private void tableDoubling() {
-		writer.println("Doubling the Table and Re-Hasing...");
-		this.m = 2*this.m;
-		this.n = 0;
-		HashItem [] tempTable = this.hashTable;
-		this.hashTable = new HashItem[this.m];
-		for (int i = 0; i < tempTable.length; i++) {
-			if (tempTable[i] != null){
-				// iterate over the list at the slot
-				HashItem current = tempTable[i];
+	private HashItem [] copyOldTable() {
+		writer.println("Making a copy of the old Table...");
+		HashItem [] copy = new HashItem[this.m];
+		for (int i = 0; i < this.hashTable.length ; i++){
+			copy[i] = this.hashTable[i];
+		}
+		return copy;
+	}
+	
+	private void printTable(HashItem [] h) {
+		for (int i = 0; i < h.length; i++){
+			writer.printf("Index[%d] : ",i);
+			if (h[i] != null) {
+				HashItem current = h[i];
+				while (current != null){
+					writer.printf("%2d-->", current.key);
+					current = current.next;
+				}
+			}
+			writer.println("Null");
+		}
+	}
+	
+	private void reHash(HashItem [] t){
+		for (int i = 0; i < t.length; i++) {
+			if (t[i] != null) {
+				HashItem current = t[i];
 				while (current != null){
 					this.putItem(current);
 					current = current.next;
 				}
 			}
 		}
+	}
+	
+	// make a copy of the old table and create a new table of double size
+	private void tableDoubling() {
+		writer.println("********Table Doubling Start**********");
+		HashItem [] temp = this.copyOldTable();
+		this.printTable(temp);   // Sanity Check
+		this.hashTable = null;   // old table deleted
+		this.m = 2*this.m;
+		this.n = 0;
+		this.hashTable = new HashItem[this.m]; // new table of double size
+		this.reHash(temp);
+		writer.println("********Table Doubling End************");
 	}
 	
 	public void TableStats(){

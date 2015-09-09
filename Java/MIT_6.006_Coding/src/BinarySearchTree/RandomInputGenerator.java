@@ -7,11 +7,11 @@ public class RandomInputGenerator {
 
 	public static void main(String[] args) throws IOException {
 		Random randomGenerator = new Random();
-		int sizeOfInput = 7;
+		int sizeOfInput = 5;
 		System.out.println("Generating some random inputs: ");
 		PrintWriter writer = new PrintWriter("inputKeys.txt", "UTF-8");
 		for (int i = 0; i < sizeOfInput; i++){
-			int randomNumber = randomGenerator.nextInt(1000);
+			int randomNumber = randomGenerator.nextInt(100);
 			if (i < sizeOfInput - 1){
 				System.out.printf("%02d-->", randomNumber);
 			}
