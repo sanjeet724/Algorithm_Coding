@@ -46,13 +46,15 @@ public class Table {
 		if (this.n == this.m) {
 			writer.println("n is: " + this.n);
 			writer.println("m is: " + this.m);
+			writer.println("***Doubling the table***");
 			this.tableDoubling();
+			writer.println("***Table Doubled********");
 		}
 	}
 	
 	public HashItem lookupItem(int k) {
 		writer.println();
-		writer.println("Searching for key: " + k + "---->");
+		writer.println("Searching for key: " + k );
 		int index = this.getHashIndex(k);
 		if (this.hashTable[index] != null) {
 			if (this.hashTable[index].key == k) {
@@ -85,7 +87,8 @@ public class Table {
 		return copy;
 	}
 	
-	private void printTable(HashItem [] h) {
+	public void printTable(HashItem [] h) {
+		writer.println("Printing the table...");
 		for (int i = 0; i < h.length; i++){
 			writer.printf("Index[%d] : ",i);
 			if (h[i] != null) {
@@ -100,11 +103,14 @@ public class Table {
 	}
 	
 	private void reHash(HashItem [] t){
+		writer.println("Rehashing the existing keys");
 		for (int i = 0; i < t.length; i++) {
 			if (t[i] != null) {
 				HashItem current = t[i];
 				while (current != null){
-					this.putItem(current);
+					// writer.println("Rehashing key: " + current.key);
+					HashItem reHashedItem = new HashItem(current);
+					this.putItem(reHashedItem);
 					current = current.next;
 				}
 			}
@@ -113,15 +119,14 @@ public class Table {
 	
 	// make a copy of the old table and create a new table of double size
 	private void tableDoubling() {
-		writer.println("********Table Doubling Start**********");
 		HashItem [] temp = this.copyOldTable();
-		this.printTable(temp);   // Sanity Check
+		// this.printTable(temp);   // Sanity Check
 		this.hashTable = null;   // old table deleted
 		this.m = 2*this.m;
 		this.n = 0;
+		this.occupied = 0;
 		this.hashTable = new HashItem[this.m]; // new table of double size
 		this.reHash(temp);
-		writer.println("********Table Doubling End************");
 	}
 	
 	public void TableStats(){

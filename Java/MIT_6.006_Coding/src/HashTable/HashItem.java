@@ -13,6 +13,12 @@ public class HashItem {
 		this.next = null;
 	}
 	
+	public HashItem(HashItem h){
+		this.key = h.key;
+		this.value = h.value;
+		this.next = null;
+	}
+	
 	private String generateRandomString(){
 		String uuid = UUID.randomUUID().toString();
 		return uuid;

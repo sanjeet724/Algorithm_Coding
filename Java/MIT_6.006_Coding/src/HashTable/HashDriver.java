@@ -17,8 +17,9 @@ public class HashDriver {
 			t.putItem(h);
 		}
 		scanner.close();
-		// t.lookupItem(95);
-		// t.TableStats();
+		//t.lookupItem(35);
+		t.printTable(t.hashTable);
+		t.TableStats();
 		t.writer.close(); // the log file for the hash table
 	}
 }
