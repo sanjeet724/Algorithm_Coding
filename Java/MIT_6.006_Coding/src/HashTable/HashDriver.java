@@ -16,19 +16,17 @@ public class HashDriver {
 			HashItem h = new HashItem(i);
 			t.putItem(h);
 		}
+		t.printTable(t.hashTable);
+		System.out.println("Deleting some items to the Table");
+		scanner = new Scanner(new File("deleteKeys.txt"));
+		while (scanner.hasNextInt()) {
+			int  i = scanner.nextInt();
+			t.deleteKey(i);
+		}
 		scanner.close();
-		//t.lookupItem(35);
 		t.printTable(t.hashTable);
 		t.TableStats();
-		t.deleteKey(23);
-		t.printTable(t.hashTable);
-		t.deleteKey(86);
-		t.printTable(t.hashTable);
-		t.deleteKey(28);
-		t.printTable(t.hashTable);
-		t.deleteKey(39);
-		t.printTable(t.hashTable);
-		t.deleteKey(01);
+		System.out.println("Check 'HashTable_log' for verbose logs");
 		t.writer.close(); // the log file for the hash table
 	}
 }

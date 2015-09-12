@@ -46,33 +46,36 @@ public class Table {
 		}
 		// Table Doubling
 		if (this.n == this.m) {
-			writer.println();
 			writer.println("n is: " + this.n);
 			writer.println("m is: " + this.m);
 			writer.println("***Doubling the table***");
 			this.tableDoubling();
-			writer.println("***Table Doubled********");
+			writer.println("**Table Double Complete**");
 		}
 	}
 	
 	public void deleteKey(int k) {
-		HashItem found = this.lookupItem(k);
 		writer.println();
 		writer.println("Deleting key: " + k );
+		HashItem found = this.lookupItem(k);
 		if (found == null){
-			writer.println("Key was not found");
 			return;
 		}
+		this.n--;
 		HashItem current = this.hashTable[this.searchIndex];
 		// Item is the head of the list
 		if (current.key == k){
 			if (current.next == null){
 				this.hashTable[this.searchIndex] = null;
+				this.checkForResize();
+				writer.println("Key Deleted: " + k );
 				return;
 			}
 			if (current.next != null){
 				this.hashTable[this.searchIndex] = current.next;
 				current = null;
+				this.checkForResize();
+				writer.println("Key Deleted: " + k );
 				return;
 			}
 		}
@@ -81,6 +84,8 @@ public class Table {
 			while (current.next != null){
 				if (current.next.key == k) {
 					current.next = current.next.next;
+					this.checkForResize();
+					writer.println("Key Deleted: " + k );
 					return;
 				}
 			    current = current.next;
@@ -89,8 +94,25 @@ public class Table {
 		
 	}
 	
+	private void checkForResize() {
+		if (this.n == this.m/4){
+			writer.println();
+			writer.println("n is: " + this.n);
+			writer.println("m is: " + this.m);
+			writer.println("***Shrinking the Table***");
+			HashItem [] temp = this.copyOldTable();
+			// this.printTable(temp);   // Sanity Check
+			this.hashTable = null;      // old table deleted
+			this.m = this.m/2;          // half the table
+			this.n = 0;
+			this.occupied = 0;
+			this.hashTable = new HashItem[this.m]; // new table of double size
+			this.reHash(temp);
+			writer.println("**Table Shrinking Complete**");
+		}
+	}
+	
 	public HashItem lookupItem(int k) {
-		writer.println();
 		writer.println("Searching for key: " + k );
 		int index = this.getHashIndex(k);
 		if (this.hashTable[index] != null) {
@@ -109,16 +131,15 @@ public class Table {
 					}
 					temp = temp.next;
 				}
-				System.out.println("Key not found in the chain: " + k);
+				writer.println("Key not found in the chain: " + k);
 				return null;
 			}
 		}
-		System.out.println("Key Not Found in the Table: " + k);
+		writer.println("Key Not Found in the Table: " + k);
 		return null;
 	}
 	
 	private HashItem [] copyOldTable() {
-		writer.println();
 		writer.println("Making a copy of the old Table...");
 		HashItem [] copy = new HashItem[this.m];
 		for (int i = 0; i < this.hashTable.length ; i++){
@@ -144,13 +165,11 @@ public class Table {
 	}
 	
 	private void reHash(HashItem [] t){
-		writer.println();
 		writer.println("Rehashing the existing keys");
 		for (int i = 0; i < t.length; i++) {
 			if (t[i] != null) {
 				HashItem current = t[i];
 				while (current != null){
-					// writer.println("Rehashing key: " + current.key);
 					// create a new item because its a linked list
 					HashItem reHashedItem = new HashItem(current);
 					this.putItem(reHashedItem);
@@ -165,7 +184,7 @@ public class Table {
 		HashItem [] temp = this.copyOldTable();
 		// this.printTable(temp);   // Sanity Check
 		this.hashTable = null;      // old table deleted
-		this.m = 2*this.m;
+		this.m = 2*this.m;          // double the table
 		this.n = 0;
 		this.occupied = 0;
 		this.hashTable = new HashItem[this.m]; // new table of double size
