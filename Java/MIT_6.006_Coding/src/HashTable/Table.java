@@ -9,6 +9,7 @@ public class Table {
 	int m = 5;      // table size
 	int n = 0;      // # of items in table
 	int occupied;   // # of occupied slots
+	int searchIndex;
 	HashItem [] hashTable; 
 	
 	public Table() throws IOException{
@@ -16,6 +17,7 @@ public class Table {
 		this.hashTable = new HashItem[this.m];
 		this.occupied = 0;
 		this.n = 0;
+		this.searchIndex = -999;
 	}
 	
 	private int getHashIndex(int k) {
@@ -44,6 +46,7 @@ public class Table {
 		}
 		// Table Doubling
 		if (this.n == this.m) {
+			writer.println();
 			writer.println("n is: " + this.n);
 			writer.println("m is: " + this.m);
 			writer.println("***Doubling the table***");
@@ -52,21 +55,57 @@ public class Table {
 		}
 	}
 	
+	public void deleteKey(int k) {
+		HashItem found = this.lookupItem(k);
+		writer.println();
+		writer.println("Deleting key: " + k );
+		if (found == null){
+			writer.println("Key was not found");
+			return;
+		}
+		HashItem current = this.hashTable[this.searchIndex];
+		// Item is the head of the list
+		if (current.key == k){
+			if (current.next == null){
+				this.hashTable[this.searchIndex] = null;
+				return;
+			}
+			if (current.next != null){
+				this.hashTable[this.searchIndex] = current.next;
+				current = null;
+				return;
+			}
+		}
+		// item is somewhwere in the chain
+		else {
+			while (current.next != null){
+				if (current.next.key == k) {
+					current.next = current.next.next;
+					return;
+				}
+			    current = current.next;
+			}
+		}
+		
+	}
+	
 	public HashItem lookupItem(int k) {
 		writer.println();
 		writer.println("Searching for key: " + k );
 		int index = this.getHashIndex(k);
 		if (this.hashTable[index] != null) {
 			if (this.hashTable[index].key == k) {
-				writer.println("Item Found: " + k + " at index: " + index);
+				writer.println("Key Found-->" + k + " at index: " + index);
+				this.searchIndex = index;
 				return this.hashTable[index];
 			}
 			else {
 				HashItem temp = this.hashTable[index];
 				while (temp != null) {
 					if (temp.key == k){
-						writer.println("Item was chained at index: " + index);
-						return this.hashTable[index];
+						writer.println("Item found chained at index: " + index);
+						this.searchIndex = index;
+						return temp;
 					}
 					temp = temp.next;
 				}
@@ -79,6 +118,7 @@ public class Table {
 	}
 	
 	private HashItem [] copyOldTable() {
+		writer.println();
 		writer.println("Making a copy of the old Table...");
 		HashItem [] copy = new HashItem[this.m];
 		for (int i = 0; i < this.hashTable.length ; i++){
@@ -88,6 +128,7 @@ public class Table {
 	}
 	
 	public void printTable(HashItem [] h) {
+		writer.println();
 		writer.println("Printing the table...");
 		for (int i = 0; i < h.length; i++){
 			writer.printf("Index[%d] : ",i);
@@ -103,12 +144,14 @@ public class Table {
 	}
 	
 	private void reHash(HashItem [] t){
+		writer.println();
 		writer.println("Rehashing the existing keys");
 		for (int i = 0; i < t.length; i++) {
 			if (t[i] != null) {
 				HashItem current = t[i];
 				while (current != null){
 					// writer.println("Rehashing key: " + current.key);
+					// create a new item because its a linked list
 					HashItem reHashedItem = new HashItem(current);
 					this.putItem(reHashedItem);
 					current = current.next;
@@ -121,7 +164,7 @@ public class Table {
 	private void tableDoubling() {
 		HashItem [] temp = this.copyOldTable();
 		// this.printTable(temp);   // Sanity Check
-		this.hashTable = null;   // old table deleted
+		this.hashTable = null;      // old table deleted
 		this.m = 2*this.m;
 		this.n = 0;
 		this.occupied = 0;

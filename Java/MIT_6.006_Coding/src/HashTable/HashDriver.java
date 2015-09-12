@@ -20,6 +20,15 @@ public class HashDriver {
 		//t.lookupItem(35);
 		t.printTable(t.hashTable);
 		t.TableStats();
+		t.deleteKey(23);
+		t.printTable(t.hashTable);
+		t.deleteKey(86);
+		t.printTable(t.hashTable);
+		t.deleteKey(28);
+		t.printTable(t.hashTable);
+		t.deleteKey(39);
+		t.printTable(t.hashTable);
+		t.deleteKey(01);
 		t.writer.close(); // the log file for the hash table
 	}
 }

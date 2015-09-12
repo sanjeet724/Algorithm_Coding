@@ -1,591 +1,202 @@
-Inserting key->477 at index: 02
-Inserting key->314 at index: 04
-Collision detected at index: 4
-314--->869
-Collision detected at index: 2
-477--->942
-Collision detected at index: 4
-314--->869--->234
+Inserting key->086 at index: 01
+Inserting key->027 at index: 02
+Inserting key->089 at index: 04
+Inserting key->040 at index: 00
+Inserting key->048 at index: 03
+
 n is: 5
 m is: 5
 ***Doubling the table***
+
 Making a copy of the old Table...
+
 Rehashing the existing keys
-Inserting key->477 at index: 07
-Inserting key->942 at index: 02
-Inserting key->314 at index: 04
-Inserting key->869 at index: 09
-Collision detected at index: 4
-314--->234
+Inserting key->040 at index: 00
+Inserting key->086 at index: 06
+Inserting key->027 at index: 07
+Inserting key->048 at index: 08
+Inserting key->089 at index: 09
 ***Table Doubled********
-Collision detected at index: 2
-942--->842
-Inserting key->461 at index: 01
-Inserting key->416 at index: 06
+Inserting key->091 at index: 01
 Collision detected at index: 6
-416--->226
-Collision detected at index: 4
-314--->234--->634
+86--->26
+Collision detected at index: 8
+48--->28
+Collision detected at index: 1
+91--->41
+Inserting key->023 at index: 03
+
 n is: 10
 m is: 10
 ***Doubling the table***
+
 Making a copy of the old Table...
+
 Rehashing the existing keys
-Inserting key->461 at index: 01
-Inserting key->942 at index: 02
-Collision detected at index: 2
-942--->842
-Inserting key->314 at index: 14
-Collision detected at index: 14
-314--->234
-Collision detected at index: 14
-314--->234--->634
-Inserting key->416 at index: 16
-Inserting key->226 at index: 06
-Inserting key->477 at index: 17
-Inserting key->869 at index: 09
-***Table Doubled********
-Inserting key->235 at index: 15
-Collision detected at index: 2
-942--->842--->962
-Inserting key->485 at index: 05
-Inserting key->439 at index: 19
-Inserting key->623 at index: 03
-Collision detected at index: 9
-869--->409
-Collision detected at index: 19
-439--->539
-Inserting key->258 at index: 18
-Collision detected at index: 5
-485--->745
-Collision detected at index: 16
-416--->536
-n is: 20
-m is: 20
-***Doubling the table***
-Making a copy of the old Table...
-Rehashing the existing keys
-Inserting key->461 at index: 21
-Inserting key->942 at index: 22
-Inserting key->842 at index: 02
-Collision detected at index: 2
-842--->962
-Inserting key->623 at index: 23
-Inserting key->485 at index: 05
-Inserting key->745 at index: 25
-Inserting key->226 at index: 26
-Inserting key->869 at index: 29
-Inserting key->409 at index: 09
-Inserting key->314 at index: 34
-Collision detected at index: 34
-314--->234
-Collision detected at index: 34
-314--->234--->634
-Inserting key->235 at index: 35
-Inserting key->416 at index: 16
-Collision detected at index: 16
-416--->536
-Inserting key->477 at index: 37
-Inserting key->258 at index: 18
-Inserting key->439 at index: 39
-Inserting key->539 at index: 19
-***Table Doubled********
-Inserting key->710 at index: 30
-Inserting key->436 at index: 36
-Inserting key->972 at index: 12
-Collision detected at index: 37
-477--->717
-Inserting key->827 at index: 27
-Inserting key->521 at index: 01
-Collision detected at index: 27
-827--->507
-Inserting key->592 at index: 32
-Collision detected at index: 16
-416--->536--->536
-Inserting key->231 at index: 31
-Collision detected at index: 19
-539--->299
-Collision detected at index: 12
-972--->252
-Inserting key->175 at index: 15
-Collision detected at index: 25
-745--->905
-Collision detected at index: 9
-409--->129
-Inserting key->851 at index: 11
-Inserting key->928 at index: 08
-Inserting key->228 at index: 28
-Collision detected at index: 21
-461--->901
-Collision detected at index: 34
-314--->234--->634--->234
-n is: 40
-m is: 40
-***Doubling the table***
-Making a copy of the old Table...
-Rehashing the existing keys
-Inserting key->521 at index: 41
-Inserting key->842 at index: 42
-Inserting key->962 at index: 02
-Inserting key->485 at index: 05
-Inserting key->928 at index: 48
-Inserting key->409 at index: 09
-Inserting key->129 at index: 49
-Inserting key->851 at index: 51
-Inserting key->972 at index: 12
-Collision detected at index: 12
-972--->252
-Inserting key->175 at index: 15
-Inserting key->416 at index: 16
-Inserting key->536 at index: 56
-Collision detected at index: 56
-536--->536
-Inserting key->258 at index: 18
-Inserting key->539 at index: 59
-Collision detected at index: 59
-539--->299
-Inserting key->461 at index: 61
-Inserting key->901 at index: 21
-Inserting key->942 at index: 62
-Inserting key->623 at index: 63
-Inserting key->745 at index: 25
-Collision detected at index: 25
-745--->905
-Inserting key->226 at index: 66
-Inserting key->827 at index: 27
-Collision detected at index: 27
-827--->507
-Inserting key->228 at index: 68
-Inserting key->869 at index: 69
-Inserting key->710 at index: 70
-Inserting key->231 at index: 71
-Inserting key->592 at index: 32
-Inserting key->314 at index: 74
-Collision detected at index: 74
-314--->234
-Collision detected at index: 74
-314--->234--->634
-Collision detected at index: 74
-314--->234--->634--->234
-Inserting key->235 at index: 75
-Inserting key->436 at index: 36
-Inserting key->477 at index: 77
-Collision detected at index: 77
-477--->717
-Inserting key->439 at index: 39
-***Table Doubled********
-Collision detected at index: 61
-461--->781
-Inserting key->765 at index: 45
-Collision detected at index: 51
-851--->771
-Inserting key->830 at index: 30
-Collision detected at index: 63
-623--->63
-Inserting key->396 at index: 76
-Inserting key->906 at index: 26
-Collision detected at index: 41
-521--->201
-Inserting key->023 at index: 23
-Collision detected at index: 18
-258--->738
-Inserting key->814 at index: 14
-Inserting key->029 at index: 29
-Inserting key->294 at index: 54
-Collision detected at index: 59
-539--->299--->139
-Inserting key->808 at index: 08
-Inserting key->564 at index: 04
-Collision detected at index: 45
-765--->685
-Inserting key->207 at index: 47
-Collision detected at index: 29
-29--->109
-Inserting key->297 at index: 57
-Inserting key->865 at index: 65
-Inserting key->499 at index: 19
-Collision detected at index: 75
-235--->715
-Collision detected at index: 15
-175--->575
-Inserting key->278 at index: 38
-Collision detected at index: 70
-710--->550
-Collision detected at index: 16
-416--->256
-Inserting key->293 at index: 53
-Collision detected at index: 4
-564--->244
-Collision detected at index: 75
-235--->715--->795
-Inserting key->333 at index: 13
-Collision detected at index: 2
-962--->962
-Inserting key->215 at index: 55
-Collision detected at index: 19
-499--->579
+Inserting key->040 at index: 00
+Inserting key->091 at index: 11
+Inserting key->041 at index: 01
+Inserting key->023 at index: 03
+Inserting key->086 at index: 06
+Collision detected at index: 6
+86--->26
+Inserting key->027 at index: 07
+Inserting key->048 at index: 08
 Collision detected at index: 8
-808--->888
-Collision detected at index: 2
-962--->962--->802
-Inserting key->104 at index: 24
-Inserting key->508 at index: 28
-Inserting key->399 at index: 79
-Collision detected at index: 29
-29--->109--->669
-n is: 80
-m is: 80
-***Doubling the table***
-Making a copy of the old Table...
-Rehashing the existing keys
-Inserting key->962 at index: 02
-Collision detected at index: 2
-962--->962
-Collision detected at index: 2
-962--->962--->802
-Inserting key->564 at index: 84
-Collision detected at index: 84
-564--->244
-Inserting key->485 at index: 05
-Inserting key->808 at index: 08
-Inserting key->888 at index: 88
-Inserting key->409 at index: 89
-Inserting key->972 at index: 12
-Inserting key->252 at index: 92
-Inserting key->333 at index: 13
-Inserting key->814 at index: 14
-Inserting key->175 at index: 15
-Inserting key->575 at index: 95
-Inserting key->416 at index: 96
-Collision detected at index: 96
-416--->256
-Inserting key->258 at index: 98
-Collision detected at index: 98
-258--->738
-Inserting key->499 at index: 19
-Inserting key->579 at index: 99
-Inserting key->901 at index: 101
-Inserting key->023 at index: 23
-Inserting key->104 at index: 104
-Inserting key->745 at index: 105
-Collision detected at index: 105
-745--->905
-Inserting key->906 at index: 106
-Inserting key->827 at index: 27
-Collision detected at index: 27
-827--->507
-Inserting key->508 at index: 28
-Inserting key->029 at index: 29
-Inserting key->109 at index: 109
-Collision detected at index: 29
-29--->669
-Inserting key->830 at index: 30
-Inserting key->592 at index: 112
-Inserting key->436 at index: 116
-Inserting key->278 at index: 118
-Inserting key->439 at index: 119
-Inserting key->521 at index: 41
-Collision detected at index: 41
-521--->201
-Inserting key->842 at index: 42
-Inserting key->765 at index: 125
-Inserting key->685 at index: 45
-Inserting key->207 at index: 47
-Inserting key->928 at index: 128
-Inserting key->129 at index: 129
-Inserting key->851 at index: 51
-Inserting key->771 at index: 131
-Inserting key->293 at index: 133
-Inserting key->294 at index: 134
-Inserting key->215 at index: 55
-Inserting key->536 at index: 56
-Collision detected at index: 56
-536--->536
-Inserting key->297 at index: 137
-Inserting key->539 at index: 59
-Inserting key->299 at index: 139
-Collision detected at index: 139
-299--->139
-Inserting key->461 at index: 141
-Collision detected at index: 141
-461--->781
-Inserting key->942 at index: 142
-Inserting key->623 at index: 143
-Inserting key->063 at index: 63
-Inserting key->865 at index: 65
-Inserting key->226 at index: 66
-Inserting key->228 at index: 68
-Inserting key->869 at index: 69
-Inserting key->710 at index: 70
-Collision detected at index: 70
-710--->550
-Inserting key->231 at index: 71
-Inserting key->314 at index: 154
-Inserting key->234 at index: 74
-Collision detected at index: 154
-314--->634
-Collision detected at index: 74
-234--->234
-Inserting key->235 at index: 75
-Collision detected at index: 75
-235--->715
-Inserting key->795 at index: 155
-Inserting key->396 at index: 76
-Inserting key->477 at index: 157
-Inserting key->717 at index: 77
-Inserting key->399 at index: 79
+48--->28
+Inserting key->089 at index: 09
 ***Table Doubled********
-Inserting key->801 at index: 01
-Inserting key->969 at index: 09
-Inserting key->624 at index: 144
-Inserting key->664 at index: 24
-Inserting key->342 at index: 22
-Collision detected at index: 55
-215--->375
-Inserting key->062 at index: 62
-Collision detected at index: 51
-851--->851
-Inserting key->767 at index: 127
-Inserting key->778 at index: 138
-Collision detected at index: 29
-29--->669--->189
-Collision detected at index: 134
-294--->294
-Collision detected at index: 106
-906--->106
-Inserting key->402 at index: 82
-Collision detected at index: 118
-278--->438
-Inserting key->465 at index: 145
-Collision detected at index: 45
-685--->205
-Inserting key->757 at index: 117
-Collision detected at index: 55
-215--->375--->215
-Inserting key->158 at index: 158
-Inserting key->881 at index: 81
-Collision detected at index: 66
-226--->706
-Inserting key->346 at index: 26
-Collision detected at index: 157
-477--->957
-Collision detected at index: 82
-402--->722
-Inserting key->423 at index: 103
-Inserting key->981 at index: 21
-Inserting key->380 at index: 60
-Collision detected at index: 27
-827--->507--->667
-Collision detected at index: 56
-536--->536--->696
-Collision detected at index: 81
-881--->881
-Collision detected at index: 65
-865--->545
-Inserting key->750 at index: 110
-Collision detected at index: 133
-293--->133
-Collision detected at index: 84
-564--->244--->884
-Inserting key->357 at index: 37
-Inserting key->713 at index: 73
-Collision detected at index: 14
-814--->814
-Inserting key->762 at index: 122
-Collision detected at index: 79
-399--->879
-Collision detected at index: 12
-972--->172
-Collision detected at index: 109
-109--->909
-Inserting key->352 at index: 32
-Inserting key->970 at index: 10
-Inserting key->039 at index: 39
-Inserting key->177 at index: 17
-Inserting key->513 at index: 33
-Inserting key->340 at index: 20
-Collision detected at index: 1
-801--->161
-Inserting key->754 at index: 114
-Collision detected at index: 145
-465--->465
-Inserting key->124 at index: 124
-Collision detected at index: 82
-402--->722--->402
-Inserting key->054 at index: 54
-Collision detected at index: 55
-215--->375--->215--->375
-Collision detected at index: 14
-814--->814--->334
-Inserting key->178 at index: 18
-Inserting key->935 at index: 135
-Collision detected at index: 39
-39--->519
-Inserting key->887 at index: 87
+Inserting key->064 at index: 04
+Inserting key->059 at index: 19
+Collision detected at index: 7
+27--->47
+Collision detected at index: 19
+59--->39
+Collision detected at index: 8
+48--->28--->48
+Inserting key->095 at index: 15
+Inserting key->025 at index: 05
+Inserting key->033 at index: 13
+Collision detected at index: 13
+33--->73
+
 Printing the table...
-Index[0] : Null
-Index[1] : 801-->161-->Null
-Index[2] : 962-->962-->802-->Null
-Index[3] : Null
-Index[4] : Null
-Index[5] : 485-->Null
-Index[6] : Null
-Index[7] : Null
-Index[8] : 808-->Null
-Index[9] : 969-->Null
-Index[10] : 970-->Null
-Index[11] : Null
-Index[12] : 972-->172-->Null
-Index[13] : 333-->Null
-Index[14] : 814-->814-->334-->Null
-Index[15] : 175-->Null
+Index[0] : 40-->Null
+Index[1] : 41-->Null
+Index[2] : Null
+Index[3] : 23-->Null
+Index[4] : 64-->Null
+Index[5] : 25-->Null
+Index[6] : 86-->26-->Null
+Index[7] : 27-->47-->Null
+Index[8] : 48-->28-->48-->Null
+Index[9] : 89-->Null
+Index[10] : Null
+Index[11] : 91-->Null
+Index[12] : Null
+Index[13] : 33-->73-->Null
+Index[14] : Null
+Index[15] : 95-->Null
 Index[16] : Null
-Index[17] : 177-->Null
-Index[18] : 178-->Null
-Index[19] : 499-->Null
-Index[20] : 340-->Null
-Index[21] : 981-->Null
-Index[22] : 342-->Null
-Index[23] : 23-->Null
-Index[24] : 664-->Null
-Index[25] : Null
-Index[26] : 346-->Null
-Index[27] : 827-->507-->667-->Null
-Index[28] : 508-->Null
-Index[29] : 29-->669-->189-->Null
-Index[30] : 830-->Null
-Index[31] : Null
-Index[32] : 352-->Null
-Index[33] : 513-->Null
-Index[34] : Null
-Index[35] : Null
-Index[36] : Null
-Index[37] : 357-->Null
-Index[38] : Null
-Index[39] : 39-->519-->Null
-Index[40] : Null
-Index[41] : 521-->201-->Null
-Index[42] : 842-->Null
-Index[43] : Null
-Index[44] : Null
-Index[45] : 685-->205-->Null
-Index[46] : Null
-Index[47] : 207-->Null
-Index[48] : Null
-Index[49] : Null
-Index[50] : Null
-Index[51] : 851-->851-->Null
-Index[52] : Null
-Index[53] : Null
-Index[54] : 54-->Null
-Index[55] : 215-->375-->215-->375-->Null
-Index[56] : 536-->536-->696-->Null
-Index[57] : Null
-Index[58] : Null
-Index[59] : 539-->Null
-Index[60] : 380-->Null
-Index[61] : Null
-Index[62] : 62-->Null
-Index[63] : 63-->Null
-Index[64] : Null
-Index[65] : 865-->545-->Null
-Index[66] : 226-->706-->Null
-Index[67] : Null
-Index[68] : 228-->Null
-Index[69] : 869-->Null
-Index[70] : 710-->550-->Null
-Index[71] : 231-->Null
-Index[72] : Null
-Index[73] : 713-->Null
-Index[74] : 234-->234-->Null
-Index[75] : 235-->715-->Null
-Index[76] : 396-->Null
-Index[77] : 717-->Null
-Index[78] : Null
-Index[79] : 399-->879-->Null
-Index[80] : Null
-Index[81] : 881-->881-->Null
-Index[82] : 402-->722-->402-->Null
-Index[83] : Null
-Index[84] : 564-->244-->884-->Null
-Index[85] : Null
-Index[86] : Null
-Index[87] : 887-->Null
-Index[88] : 888-->Null
-Index[89] : 409-->Null
-Index[90] : Null
-Index[91] : Null
-Index[92] : 252-->Null
-Index[93] : Null
-Index[94] : Null
-Index[95] : 575-->Null
-Index[96] : 416-->256-->Null
-Index[97] : Null
-Index[98] : 258-->738-->Null
-Index[99] : 579-->Null
-Index[100] : Null
-Index[101] : 901-->Null
-Index[102] : Null
-Index[103] : 423-->Null
-Index[104] : 104-->Null
-Index[105] : 745-->905-->Null
-Index[106] : 906-->106-->Null
-Index[107] : Null
-Index[108] : Null
-Index[109] : 109-->909-->Null
-Index[110] : 750-->Null
-Index[111] : Null
-Index[112] : 592-->Null
-Index[113] : Null
-Index[114] : 754-->Null
-Index[115] : Null
-Index[116] : 436-->Null
-Index[117] : 757-->Null
-Index[118] : 278-->438-->Null
-Index[119] : 439-->Null
-Index[120] : Null
-Index[121] : Null
-Index[122] : 762-->Null
-Index[123] : Null
-Index[124] : 124-->Null
-Index[125] : 765-->Null
-Index[126] : Null
-Index[127] : 767-->Null
-Index[128] : 928-->Null
-Index[129] : 129-->Null
-Index[130] : Null
-Index[131] : 771-->Null
-Index[132] : Null
-Index[133] : 293-->133-->Null
-Index[134] : 294-->294-->Null
-Index[135] : 935-->Null
-Index[136] : Null
-Index[137] : 297-->Null
-Index[138] : 778-->Null
-Index[139] : 299-->139-->Null
-Index[140] : Null
-Index[141] : 461-->781-->Null
-Index[142] : 942-->Null
-Index[143] : 623-->Null
-Index[144] : 624-->Null
-Index[145] : 465-->465-->Null
-Index[146] : Null
-Index[147] : Null
-Index[148] : Null
-Index[149] : Null
-Index[150] : Null
-Index[151] : Null
-Index[152] : Null
-Index[153] : Null
-Index[154] : 314-->634-->Null
-Index[155] : 795-->Null
-Index[156] : Null
-Index[157] : 477-->957-->Null
-Index[158] : 158-->Null
-Index[159] : Null
+Index[17] : Null
+Index[18] : Null
+Index[19] : 59-->39-->Null
 
 ***Table Stats***
-Table Size: 160
-Total # of items: 140
-Occupied Slots in Table: 97
-# of free slots: 63
+Table Size: 20
+Total # of items: 19
+Occupied Slots in Table: 13
+# of free slots: 7
+
+Searching for key: 23
+Key Found-->23 at index: 3
+
+Deleting key: 23
+
+Printing the table...
+Index[0] : 40-->Null
+Index[1] : 41-->Null
+Index[2] : Null
+Index[3] : Null
+Index[4] : 64-->Null
+Index[5] : 25-->Null
+Index[6] : 86-->26-->Null
+Index[7] : 27-->47-->Null
+Index[8] : 48-->28-->48-->Null
+Index[9] : 89-->Null
+Index[10] : Null
+Index[11] : 91-->Null
+Index[12] : Null
+Index[13] : 33-->73-->Null
+Index[14] : Null
+Index[15] : 95-->Null
+Index[16] : Null
+Index[17] : Null
+Index[18] : Null
+Index[19] : 59-->39-->Null
+
+Searching for key: 86
+Key Found-->86 at index: 6
+
+Deleting key: 86
+
+Printing the table...
+Index[0] : 40-->Null
+Index[1] : 41-->Null
+Index[2] : Null
+Index[3] : Null
+Index[4] : 64-->Null
+Index[5] : 25-->Null
+Index[6] : 26-->Null
+Index[7] : 27-->47-->Null
+Index[8] : 48-->28-->48-->Null
+Index[9] : 89-->Null
+Index[10] : Null
+Index[11] : 91-->Null
+Index[12] : Null
+Index[13] : 33-->73-->Null
+Index[14] : Null
+Index[15] : 95-->Null
+Index[16] : Null
+Index[17] : Null
+Index[18] : Null
+Index[19] : 59-->39-->Null
+
+Searching for key: 28
+Item found chained at index: 8
+
+Deleting key: 28
+
+Printing the table...
+Index[0] : 40-->Null
+Index[1] : 41-->Null
+Index[2] : Null
+Index[3] : Null
+Index[4] : 64-->Null
+Index[5] : 25-->Null
+Index[6] : 26-->Null
+Index[7] : 27-->47-->Null
+Index[8] : 48-->48-->Null
+Index[9] : 89-->Null
+Index[10] : Null
+Index[11] : 91-->Null
+Index[12] : Null
+Index[13] : 33-->73-->Null
+Index[14] : Null
+Index[15] : 95-->Null
+Index[16] : Null
+Index[17] : Null
+Index[18] : Null
+Index[19] : 59-->39-->Null
+
+Searching for key: 39
+Item found chained at index: 19
+
+Deleting key: 39
+
+Printing the table...
+Index[0] : 40-->Null
+Index[1] : 41-->Null
+Index[2] : Null
+Index[3] : Null
+Index[4] : 64-->Null
+Index[5] : 25-->Null
+Index[6] : 26-->Null
+Index[7] : 27-->47-->Null
+Index[8] : 48-->48-->Null
+Index[9] : 89-->Null
+Index[10] : Null
+Index[11] : 91-->Null
+Index[12] : Null
+Index[13] : 33-->73-->Null
+Index[14] : Null
+Index[15] : 95-->Null
+Index[16] : Null
+Index[17] : Null
+Index[18] : Null
+Index[19] : 59-->Null
+
+Searching for key: 1
+
+Deleting key: 1
+Key was not found
