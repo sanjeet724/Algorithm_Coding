@@ -16,6 +16,7 @@ public class HashDriver {
 			HashItem h = new HashItem(i);
 			t.putItem(h);
 		}
+		/*
 		t.printTable(t.hashTable);
 		System.out.println("Deleting some items to the Table");
 		scanner = new Scanner(new File("deleteKeys.txt"));
@@ -23,9 +24,19 @@ public class HashDriver {
 			int  i = scanner.nextInt();
 			t.deleteKey(i);
 		}
+		*/
 		scanner.close();
 		t.printTable(t.hashTable);
 		t.TableStats();
+		/*
+		long startTime = System.nanoTime();   
+		HashItem x = t.lookupItem(192838580);
+		long stopTime = System.nanoTime(); 
+		long elapsedTime = stopTime - startTime;
+		if (x != null){
+			System.out.println(x.key + " was found in: " + elapsedTime);
+		}
+		*/
 		System.out.println("Check 'HashTable_log' for verbose logs");
 		t.writer.close(); // the log file for the hash table
 	}

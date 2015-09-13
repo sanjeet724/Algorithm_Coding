@@ -1,16 +1,25 @@
 package BinarySearchTree;
 
+import java.util.UUID;
+
 class Node {
 	int key;
+	String value;
 	Node parent;
 	Node leftChild;
 	Node rightChild;
 	
 	public Node(int k) {
-		key = k;
-		parent = null;
-		leftChild = null;
-		rightChild = null;
+		this.key = k;
+		this.value = this.generateRandomString();
+		this.parent = null;
+		this.leftChild = null;
+		this.rightChild = null;
+	}
+	
+	private String generateRandomString(){
+		String uuid = UUID.randomUUID().toString();
+		return uuid;
 	}
 	
 	// to avoid nullpointer exception errors

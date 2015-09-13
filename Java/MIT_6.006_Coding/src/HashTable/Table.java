@@ -4,13 +4,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
+
 public class Table {
 	PrintWriter writer;
-	static int m = 5;      // table size
+	static int m = 160;      // table size
 	static int n = 0;      // # of items in table
 	int occupied;          // # of occupied slots
 	int searchIndex;
 	HashItem [] hashTable; 
+	// Universal Hashing Constants
+	static final int a = 131;
+	static final int b = 41;
+	static final int p = 1911;
 	
 	public Table() throws IOException{
 		this.writer = new PrintWriter("HashTable_Log.txt", "UTF-8");
@@ -19,13 +24,22 @@ public class Table {
 		this.searchIndex = -999;
 	}
 	
-	private static int getHashIndex(int k) {
+	// Division Hash Function
+	/*
+	private static int DivisionHashIndex(int k) {
 		return k % m;
+	}
+	*/
+	
+	// a better hash function - Universal Hash
+	// h(k) = [(ak + b) mod p] mod m 
+	private static int UniversalHashIndex(int k){
+		return Math.abs(((a*k + b) % p) % m);
 	}
 	
 	public void putItem(HashItem h) {
 		n++;
-		int index = getHashIndex(h.key);
+		int index = UniversalHashIndex(h.key);
 		if ( this.hashTable[index] == null ){
 			writer.printf("Inserting key->%03d at index: %02d",h.key,index);
 			writer.println();
@@ -113,7 +127,7 @@ public class Table {
 	
 	public HashItem lookupItem(int k) {
 		writer.println("Searching for key: " + k );
-		int index = getHashIndex(k);
+		int index = UniversalHashIndex(k);
 		if (this.hashTable[index] != null) {
 			if (this.hashTable[index].key == k) {
 				writer.println("Key Found-->" + k + " at index: " + index);

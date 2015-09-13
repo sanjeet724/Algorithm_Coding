@@ -31,11 +31,21 @@ public class BSTDriver {
 			System.out.println("Key found\n");
 		}
 		*/
+		// recording time for a find
+		long startTime = System.nanoTime();   
+		Node x = bst.IterativeSearch(192838580);
+		long stopTime = System.nanoTime(); 
+		long elapsedTime = stopTime - startTime;
+		if (x != null){
+			System.out.println(x.key + " was found in: " + elapsedTime);
+		}
+
 		System.out.println("Inorder Traversal before delete: ");
 		bst.InorderTraversal();
 		System.out.println("\nHeight of the BST before delete is: " + bst.getHeightofBST());
 		// bst.RepresentationInvariant();
 		// System.out.println("Enter the key you want to find next larger: ");
+		/*
 		System.out.println("Enter the key you want to delete: ");
 		Scanner in = new Scanner(System.in);
 		int keyTobeDeleted = in.nextInt();
@@ -45,7 +55,6 @@ public class BSTDriver {
 		bst.InorderTraversal();
 		System.out.println("\nHeight of the BST after delete is: " + bst.getHeightofBST());
 
-		/*
 		Node nextLarger = bst.nextLarger(keyTobeDeleted);
 		
 		if (nextLarger == null) {
@@ -54,8 +63,8 @@ public class BSTDriver {
 		else {
 			System.out.println("nextLarger is: " + nextLarger.key);
 		}
-		*/
 		in.close();
+		*/
 	}
 }
  
