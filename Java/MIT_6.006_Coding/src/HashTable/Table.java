@@ -6,27 +6,26 @@ import java.io.PrintWriter;
 
 public class Table {
 	PrintWriter writer;
-	int m = 5;      // table size
-	int n = 0;      // # of items in table
-	int occupied;   // # of occupied slots
+	static int m = 5;      // table size
+	static int n = 0;      // # of items in table
+	int occupied;          // # of occupied slots
 	int searchIndex;
 	HashItem [] hashTable; 
 	
 	public Table() throws IOException{
 		this.writer = new PrintWriter("HashTable_Log.txt", "UTF-8");
-		this.hashTable = new HashItem[this.m];
+		this.hashTable = new HashItem[m];
 		this.occupied = 0;
-		this.n = 0;
 		this.searchIndex = -999;
 	}
 	
-	private int getHashIndex(int k) {
-		return k % this.m;
+	private static int getHashIndex(int k) {
+		return k % m;
 	}
 	
 	public void putItem(HashItem h) {
-		this.n++;
-		int index = this.getHashIndex(h.key);
+		n++;
+		int index = getHashIndex(h.key);
 		if ( this.hashTable[index] == null ){
 			writer.printf("Inserting key->%03d at index: %02d",h.key,index);
 			writer.println();
@@ -45,9 +44,9 @@ public class Table {
 			writer.println(h.key);
 		}
 		// Table Doubling
-		if (this.n == this.m) {
-			writer.println("n is: " + this.n);
-			writer.println("m is: " + this.m);
+		if (n == m) {
+			writer.println("n is: " + n);
+			writer.println("m is: " + m);
 			writer.println("***Doubling the table***");
 			this.tableDoubling();
 			writer.println("**Table Double Complete**");
@@ -61,7 +60,7 @@ public class Table {
 		if (found == null){
 			return;
 		}
-		this.n--;
+		n--;
 		HashItem current = this.hashTable[this.searchIndex];
 		// Item is the head of the list
 		if (current.key == k){
@@ -95,18 +94,18 @@ public class Table {
 	}
 	
 	private void checkForResize() {
-		if (this.n == this.m/4){
+		if (n == m/4){
 			writer.println();
-			writer.println("n is: " + this.n);
-			writer.println("m is: " + this.m);
+			writer.println("n is: " + n);
+			writer.println("m is: " + m);
 			writer.println("***Shrinking the Table***");
 			HashItem [] temp = this.copyOldTable();
 			// this.printTable(temp);   // Sanity Check
 			this.hashTable = null;      // old table deleted
-			this.m = this.m/2;          // half the table
-			this.n = 0;
+			m = m/2;          // half the table
+			n = 0;
 			this.occupied = 0;
-			this.hashTable = new HashItem[this.m]; // new table of double size
+			this.hashTable = new HashItem[m]; // new table of double size
 			this.reHash(temp);
 			writer.println("**Table Shrinking Complete**");
 		}
@@ -114,7 +113,7 @@ public class Table {
 	
 	public HashItem lookupItem(int k) {
 		writer.println("Searching for key: " + k );
-		int index = this.getHashIndex(k);
+		int index = getHashIndex(k);
 		if (this.hashTable[index] != null) {
 			if (this.hashTable[index].key == k) {
 				writer.println("Key Found-->" + k + " at index: " + index);
@@ -141,7 +140,7 @@ public class Table {
 	
 	private HashItem [] copyOldTable() {
 		writer.println("Making a copy of the old Table...");
-		HashItem [] copy = new HashItem[this.m];
+		HashItem [] copy = new HashItem[m];
 		for (int i = 0; i < this.hashTable.length ; i++){
 			copy[i] = this.hashTable[i];
 		}
@@ -184,21 +183,21 @@ public class Table {
 		HashItem [] temp = this.copyOldTable();
 		// this.printTable(temp);   // Sanity Check
 		this.hashTable = null;      // old table deleted
-		this.m = 2*this.m;          // double the table
-		this.n = 0;
+		m = 2*m;          // double the table
+		n = 0;
 		this.occupied = 0;
-		this.hashTable = new HashItem[this.m]; // new table of double size
+		this.hashTable = new HashItem[m]; // new table of double size
 		this.reHash(temp);
 	}
 	
 	public void TableStats(){
 		writer.println();
 		writer.println("***Table Stats***");
-		writer.println("Table Size: " + this.m);
-		writer.println("Total # of items: " + this.n);
+		writer.println("Table Size: " + m);
+		writer.println("Total # of items: " + n);
 		writer.println("Occupied Slots in Table: " + this.occupied);
 		int freeSlots = 0;
-		for (int i = 0; i < this.m; i++){
+		for (int i = 0; i < m; i++){
 			if (this.hashTable[i] == null){
 				freeSlots++;
 			}
