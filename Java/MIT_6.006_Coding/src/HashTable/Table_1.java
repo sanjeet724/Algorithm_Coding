@@ -3,13 +3,13 @@ package HashTable;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+// A Hash Table with Chaining
 
-
-public class Table {
+public class Table_1 {
 	PrintWriter writer;
-	static int m = 160;      // table size
-	static int n = 0;      // # of items in table
-	int occupied;          // # of occupied slots
+	static int m = 160;     // table size
+	static int n = 0;       // # of items in table
+	int occupied;           // # of occupied slots
 	int searchIndex;
 	HashItem [] hashTable; 
 	// Universal Hashing Constants
@@ -17,11 +17,11 @@ public class Table {
 	static final int b = 41;
 	static final int p = 1911;
 	
-	public Table() throws IOException{
+	public Table_1() throws IOException{
 		this.writer = new PrintWriter("HashTable_Log.txt", "UTF-8");
 		this.hashTable = new HashItem[m];
 		this.occupied = 0;
-		this.searchIndex = -999;
+		this.searchIndex = -1;
 	}
 	
 	// Division Hash Function

@@ -9,7 +9,7 @@ public class HashDriver {
 	public static void main(String[] args) throws IOException {
 		System.out.println("Reading the input file... ");
 		Scanner scanner = new Scanner(new File("inputKeys.txt"));
-		Table t = new Table();
+		Table_1 t = new Table_1();
 		System.out.println("Adding some items to the Table");
 		while (scanner.hasNextInt()) {
 			int  i = scanner.nextInt();

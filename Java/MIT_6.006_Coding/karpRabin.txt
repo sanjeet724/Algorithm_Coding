@@ -1,0 +1,5 @@
+This is a test to see if the
+karp-rabin algorithm works or
+not.If it works, then my code
+is correct.Otherwise I need to
+rework on the implmentation.
