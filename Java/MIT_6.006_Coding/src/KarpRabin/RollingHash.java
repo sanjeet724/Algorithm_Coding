@@ -3,9 +3,8 @@ package KarpRabin;
 // Rolling Hash ADT
 
 public class RollingHash {
-	static String s;
-	static int a = 10;   // size of ascii alphabet
-	static int m = 10079;  // a 4-digit prime
+	static int a = 10;     // size of ascii alphabet
+	static int m = 10079;  // a 5-digit prime
 	StringBuilder x;
 	
 	public RollingHash(StringBuilder someString){
@@ -19,8 +18,6 @@ public class RollingHash {
 		for (int i = 0 ;i < this.x.length(); i++){
 			sum = (int) (sum + (int)this.x.charAt(i) * Math.pow(a,i));
 		}
-		// System.out.println("Sum is : " + sum);
-		// System.out.println("Hash Index is: " + sum%m);
 		return sum % m;
 	}
 	

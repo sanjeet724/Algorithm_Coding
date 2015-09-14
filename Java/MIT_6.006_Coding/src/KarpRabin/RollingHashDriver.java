@@ -3,15 +3,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-//karp-rabin algorithm
+// karp-rabin algorithm
 
 public class RollingHashDriver {
 
 	public static void main(String[] args) throws IOException {
-		String pattern = "works";
-		RollingHash r = new RollingHash(new StringBuilder(pattern));
-		long patternHash = r.getHashValue();
-		// Read the document and create the giant string
+		String pattern = "article";
+		// Read the document and create the target string
 		BufferedReader br = new BufferedReader(new FileReader("karpRabin.txt"));
 	    StringBuilder sb = new StringBuilder();
 	    String line = br.readLine();
@@ -21,30 +19,40 @@ public class RollingHashDriver {
 	        line = br.readLine();
 	    }
 	    br.close();
-	    // our huge string
 	    String target = sb.toString(); 
-	    // check the first n characters
-	    StringBuilder sliding = new StringBuilder(target.substring(0, pattern.length()));
-	    RollingHash t = new RollingHash(sliding);
-	    long slidingValue = t.getHashValue();
-	    if (slidingValue == patternHash) {
-	    	if (pattern.equals(sliding)){
+	    karpRabin(pattern, target);
+	}
+	
+	private static void karpRabin(String p, String t) {
+		// rolling hash for the pattern
+		int matchCount = 0;
+		RollingHash r1 = new RollingHash(new StringBuilder(p));
+		long patternHash = r1.getHashValue();
+		// rolling hash for the sliding window
+		// first check the substring equaling pattern's length
+	    StringBuilder slidingString = new StringBuilder(t.substring(0, p.length()));
+	    RollingHash r2 = new RollingHash(slidingString);
+	    long slidingHash = r2.getHashValue();
+	    // System.out.println("Sliding String: " + r2.x);
+	    if (slidingHash == patternHash) {
+	    	if (p.equals(slidingString.toString())){
+	    		matchCount++;
 	    		System.out.println("Match Found");
 	    	}
 	    }
-	    for (int i = pattern.length(); i < target.length() - pattern.length(); i++) {
-	    	t.append(target.charAt(i));
-	    	t.skip();
-	    	// System.out.println("Sliding String: " + t.x);
-	    	slidingValue = t.getHashValue();
-	        if (slidingValue == patternHash) {
-	        	// System.out.println("hash value matches");
-		    	if (pattern.equals(t.x.toString())){
-		    		System.out.println("Sliding String: " + t.x);
-		    		System.out.println("Match Found");
+	    for (int i = p.length(); i < t.length() - p.length(); i++) {
+	    	// System.out.println("Sliding String: " + r2.x);
+	    	r2.append(t.charAt(i));
+	    	r2.skip();
+	    	slidingHash = r2.getHashValue();
+	        if (slidingHash == patternHash) {
+		    	if (p.equals(r2.x.toString())){
+		    		// System.out.println("Sliding String: " + r2.x);
+		    		matchCount++;
+		    		// System.out.println("Match Found");
 		    	}
 		    }
 	    }
-	 
+	    System.out.println("# Matches Found: " + matchCount);
 	}
 }
