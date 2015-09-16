@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package MockDataSetup;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
@@ -7,7 +7,7 @@ public class RandomInputGenerator {
 
 	public static void main(String[] args) throws IOException {
 		Random randomGenerator = new Random();
-		int sizeOfInput = 155;
+		int sizeOfInput = 100000;
 		System.out.println("Generating some random inputs: ");
 		PrintWriter writer = new PrintWriter("inputKeys.txt", "UTF-8");
 		for (int i = 0; i < sizeOfInput; i++){
