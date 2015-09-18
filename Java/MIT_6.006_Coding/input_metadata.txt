@@ -10,3 +10,8 @@ AVLTree - with left-right zigzag rotation(needs to be implemented)
 // Hash Table
 Inserts,Deletes,Table Resizing all work
 Need to implement a good hash function
+// Hash Table vs BST
+# of items = 80,000
+BST performs well for a lower input size
+But when the input size is large, the Hash Table performed better by choosing
+good primes and keeping the load factor n/m~1
