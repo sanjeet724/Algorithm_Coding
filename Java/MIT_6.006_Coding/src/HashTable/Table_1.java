@@ -7,15 +7,12 @@ import java.io.PrintWriter;
 
 public class Table_1 {
 	PrintWriter writer;
-	static int m = 160;     // table size
-	static int n = 0;       // # of items in table
-	int occupied;           // # of occupied slots
+	static int collsionCount = 0;
+	static int m = 80021;     // table size
+	static int n = 0;         // # of items in table
+	int occupied;             // # of occupied slots
 	int searchIndex;
 	HashItem [] hashTable; 
-	// Universal Hashing Constants
-	static final int a = 131;
-	static final int b = 41;
-	static final int p = 1911;
 	
 	public Table_1() throws IOException{
 		this.writer = new PrintWriter("HashTable_Log.txt", "UTF-8");
@@ -30,10 +27,16 @@ public class Table_1 {
 		return k % m;
 	}
 	*/
+
 	
 	// a better hash function - Universal Hash
 	// h(k) = [(ak + b) mod p] mod m 
+
 	private static int UniversalHashIndex(int k){
+		// Universal Hashing Constants
+		int a = 9491;
+		int b = 5233;
+		int p = 99999989;
 		return Math.abs(((a*k + b) % p) % m);
 	}
 	
@@ -48,6 +51,7 @@ public class Table_1 {
 		} 
 		else {
 			writer.println("Collision detected at index: " + index);
+			collsionCount++;
 			HashItem temp = this.hashTable[index];
 			writer.printf("%d--->",temp.key);
 			while (temp.next != null) {
@@ -197,7 +201,7 @@ public class Table_1 {
 		HashItem [] temp = this.copyOldTable();
 		// this.printTable(temp);   // Sanity Check
 		this.hashTable = null;      // old table deleted
-		m = 2*m;          // double the table
+		m = 2*m;                    // double the table
 		n = 0;
 		this.occupied = 0;
 		this.hashTable = new HashItem[m]; // new table of double size
@@ -217,6 +221,7 @@ public class Table_1 {
 			}
 		}
 		writer.println("# of free slots: " + freeSlots);
+		writer.println("# of Collisions: " + collsionCount);
 	}
 	
 	
