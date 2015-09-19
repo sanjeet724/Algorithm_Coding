@@ -3,8 +3,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import HashTable.HashItem;
-
 // karp-rabin algorithm
 
 public class RollingHashDriver {
