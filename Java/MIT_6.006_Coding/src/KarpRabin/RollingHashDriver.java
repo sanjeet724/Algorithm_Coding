@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import HashTable.HashItem;
+
 // karp-rabin algorithm
 
 public class RollingHashDriver {
@@ -20,7 +22,11 @@ public class RollingHashDriver {
 	    }
 	    br.close();
 	    String target = sb.toString(); 
+		long startTime = System.nanoTime();   
 	    karpRabin(pattern, target);
+	    long stopTime = System.nanoTime(); 
+	    long elapsedTime = stopTime - startTime;
+	    System.out.println("Time taken to find the matches: " + elapsedTime);
 	}
 	
 	private static void karpRabin(String p, String t) {

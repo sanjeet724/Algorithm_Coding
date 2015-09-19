@@ -15,3 +15,6 @@ Need to implement a good hash function
 BST performs well for a lower input size
 But when the input size is large, the Hash Table performed better by choosing
 good primes and keeping the load factor n/m~1
+// Karp-Rabin
+# Matches Found: 17
+Time taken to find the matches: 17754662
