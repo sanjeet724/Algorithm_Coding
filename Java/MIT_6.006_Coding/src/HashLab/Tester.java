@@ -1,10 +1,9 @@
 package HashLab;
 
 public class Tester {
-	static long base = 100;
+	static long base = 256;
 	static long prime = 23;
 
-	
 	public Tester () {
 
 	}
@@ -23,7 +22,7 @@ public class Tester {
 	
 	private int HashIndex(long numericValue) {
 		long index = numericValue % prime;
-		System.out.println("Hash Index of s1: " + index);
+		System.out.println("Hash Index of String: " + index);
 		return (int) index;
 	}
 }
