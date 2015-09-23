@@ -5,6 +5,7 @@ package KarpRabin;
 public class RollingHash {
 	static long base = 256;
 	static long prime = 997;
+	static long slidingWindow;
 	StringBuilder s;
 	long numericValue;
 	long hashValue;
@@ -44,10 +45,10 @@ public class RollingHash {
 	}
 	
 	// updates the numeric value during a skip operation
-	private void skipUpdate(char c, int lenOfPattern){
+	private void skipUpdate(char c) {
 		// set the skipMultiplier
 		if (this.skipMultiplier == 0){
-			this.skipMultiplier = (long) Math.pow(base, lenOfPattern);
+			this.skipMultiplier = (long) Math.pow(base, slidingWindow);
 		}
 		this.numericValue = this.numericValue - (long)c*this.skipMultiplier;
 		this.HashIndex(this.numericValue);
@@ -56,7 +57,7 @@ public class RollingHash {
 	public void skipChar(int lenOfPattern) {
 		char c = this.s.charAt(0);
 		this.s.deleteCharAt(0);
-		this.skipUpdate(c,lenOfPattern);
+		this.skipUpdate(c);
 	}
 
 }

@@ -9,6 +9,7 @@ public class RollingHashDriver {
 
 	public static void main(String[] args) throws IOException {
 		String pattern = "article";
+		RollingHash.slidingWindow = pattern.length();
 		// Read the document and create the target string
 		BufferedReader br = new BufferedReader(new FileReader("karpRabin.txt"));
 	    StringBuilder sb = new StringBuilder();
