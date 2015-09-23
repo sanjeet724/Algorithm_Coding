@@ -19,6 +19,7 @@ public class RollingHashDriver {
 	        line = br.readLine();
 	    }
 	    br.close();
+	    sb.deleteCharAt(sb.length()-1); // delete the last "/n" character
 	    String target = sb.toString(); 
 		long startTime = System.nanoTime();   
 	    karpRabin(pattern, target);
@@ -28,32 +29,31 @@ public class RollingHashDriver {
 	}
 	
 	private static void karpRabin(String p, String t) {
-		// rolling hash for the pattern
+		RollingHash r1 = new RollingHash();
+		// Create the rolling hash of the pattern String
+		for (int i = 0; i < p.length(); i++){
+			r1.appendChar(p.charAt(i));
+		}
+		// Create the rolling hash of the target String 
+	    RollingHash r2 = new RollingHash();
+		for (int i = 0; i < p.length(); i++){
+			r2.appendChar(t.charAt(i));
+		}
 		int matchCount = 0;
-		RollingHash r1 = new RollingHash(new StringBuilder(p));
-		long patternHash = r1.getHashValue();
-		// rolling hash for the sliding window
 		// first check the substring equaling pattern's length
-	    StringBuilder slidingString = new StringBuilder(t.substring(0, p.length()));
-	    RollingHash r2 = new RollingHash(slidingString);
-	    long slidingHash = r2.getHashValue();
-	    // System.out.println("Sliding String: " + r2.x);
-	    if (slidingHash == patternHash) {
-	    	if (p.equals(slidingString.toString())){
+	    if (r1.hashValue == r2.hashValue) {
+	    	if (p.equals(r2.s.toString())){
 	    		matchCount++;
 	    		System.out.println("Match Found");
 	    	}
 	    }
+	    // compare the rest of the document
 	    for (int i = p.length(); i < t.length() - p.length(); i++) {
-	    	// System.out.println("Sliding String: " + r2.x);
-	    	r2.append(t.charAt(i));
-	    	r2.skip();
-	    	slidingHash = r2.getHashValue();
-	        if (slidingHash == patternHash) {
-		    	if (p.equals(r2.x.toString())){
-		    		// System.out.println("Sliding String: " + r2.x);
+	    	r2.appendChar(t.charAt(i));
+	    	r2.skipChar(p.length());
+	        if (r1.hashValue == r2.hashValue) {
+		    	if (p.equals(r2.s.toString())){
 		    		matchCount++;
-		    		// System.out.println("Match Found");
 		    	}
 		    }
 	    }

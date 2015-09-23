@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // this program implements the peak finding problem discussed in MIT 6.006 lectures
 
-class driver {
+class PeakDriver {
 
 	public static void main(String[] args) {
 		System.out.println("Enter your Choice--> ");
