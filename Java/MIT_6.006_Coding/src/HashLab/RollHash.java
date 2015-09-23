@@ -17,7 +17,7 @@ public class RollHash {
 		for (int i = this.s.length()-1 ; i >= 0; i--){
 			sum = (sum + (long) this.s.charAt(i) * (long) Math.pow(base,i-(this.s.length()-1)));
 		}
-		System.out.println("Numeric Value of String: " + sum);
+		//System.out.println("Numeric Value of String: " + sum);
 		this.HashIndex(sum);
 		return sum;
 	}
