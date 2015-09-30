@@ -11,7 +11,7 @@ class Driver {
 		testRollHash_2();
 		}
 	
-	private static void testRollHash_1() {
+	public static void testRollHash_1() {
 		System.out.println("Rolling Hash Test 1");
 		RollHash r1 = new RollHash();
 		r1.appendChar('t');

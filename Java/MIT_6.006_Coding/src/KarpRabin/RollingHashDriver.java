@@ -23,7 +23,7 @@ public class RollingHashDriver {
 	    sb.deleteCharAt(sb.length()-1); // delete the last "/n" character
 	    String target = sb.toString(); 
 	    karpRabin_1(pattern, target);
-	    karpRabin_2(pattern, target);
+	    //karpRabin_2(pattern, target);
 	}
 	
 	private static void karpRabin_1(String p, String t) {

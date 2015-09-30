@@ -1,0 +1,14 @@
+---Done---
+1.BST(search,insert,delete,sort-inorder traversal)
+2.AVL Tree(left,right rotations)
+3.Heap/Heap Sort
+4.Hash Table with Chaining(insert,delete,table resizing)
+5.Rolling Hash and Karp-Rabin(Simple)
+
+---To Do---
+1.Hash Table with open addressing
+2.Improve Karp-Rabin(do the math)
+3.BST(postorder, preorder traversals)
+4.Linked Lists(doubly and circular)
+5.Stacks
+6.Queues
